@@ -1,0 +1,3 @@
+# Practice fixtures must retain the exact bytes used by the independent hashes.
+guides/file-list-pick/file-list-pick-practice/** -text
+*.zip binary

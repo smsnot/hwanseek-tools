@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0 — 2026-09-09
+
+Added File List Pick: exact full-filename matching against a selected local folder, grouped repeated requests, missing-file review, explicit ambiguity selection, and local ZIP copies with preserved relative paths and a JSON report. Includes partial-bundle acknowledgement, bounded input/output, cancellation, portable-path collision checks, and independent fixture/hash tests. Existing tools remain available.
+
 ## 0.4.0 — 2026-09-09
 
 Added Image Fit Review, Image Size Check, and Photo Sheet. Includes exact-canvas PNG ZIP copies, measured JPG byte limits with explicit failure, and paginated photo PDFs with selectable wrapped filenames. Added still-image signature and animation checks, safe duplicate output filenames, EXIF-oriented decoding, Unicode filename font and its OFL license, and seven automated tests. Existing five tools remain available. Three separate five-card English guides accompany the release.

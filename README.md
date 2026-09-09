@@ -1,6 +1,14 @@
 # HWANSEEK — Small browser tools
 
+## File List Pick
+
+[Open the tool](https://hwanseek.shinhwa7848.chatgpt.site/file-list-pick). Select a local folder, paste one full filename per line, review missing and ambiguous matches, and create a ZIP of selected files with relative folder paths and a JSON report. Exact matching preserves case, spaces and Unicode spelling. Repeated requests include the same source file only once. Multiple matches require an explicit choice or skip; missing and skipped names require acknowledgement before a partial bundle can be created.
+
+Source file bytes are copied without conversion or compression. Originals are never written. The tool reads up to 10,000 chosen source files, accepts up to 1,000 nonempty request lines / 120,000 characters, and bundles up to 64 MiB of selected input bytes (plus ZIP/report overhead). Unsafe paths, Windows-reserved names, and case/Unicode-equivalent output path collisions are blocked. Desktop browser recommended. This does not fetch cloud-only files, correct typos, preserve filesystem permissions/dates, or include empty directories. [Practice and expected results](guides/file-list-pick/).
+
 ## Practical guides
+
+- [Merge Google Takeout ZIP folders with 7-Zip](guides/merge-zips/): a shared-output-folder workflow, separate collision exercises, and verified practice archives.
 
 - [Keep CSV identifiers intact in Google Sheets](guides/google-sheets-csv/): free practice files, a tested import setting, and numeric amount conversion while identifiers remain text.
 - [Save selected Google Docs pages as a PDF](guides/google-docs-pdf/): a free practice document, page-range instructions, and the checked two-page PDF output.
