@@ -14,7 +14,7 @@ The PDF files were reopened with pypdf and every page was rendered with Poppler 
 
 ## Compare against the source
 
-`expected-transcription.json` is the independent source-text oracle, defined before any OCR run. The companion text files give the full expected transcription of each page. Search for these terms and check which page contains the result:
+`expected-transcription.json` is the independent source-text oracle, defined before any OCR run. It includes the full expected transcription of each page. Search for these terms and check which page contains the result:
 
 - `MAPLE-0427`: clean pages 1 and 2.
 - `cobalt notebook`: clean page 1.
