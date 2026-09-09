@@ -2,7 +2,7 @@
 
 A small, free browser tool for text copied from PDFs. Paste a passage, review each line boundary, and choose **Keep break**, **Join with space**, or **Join without space**. The original remains alongside the result.
 
-- [Use the tool](https://hwanseek.abuzz-oak-8171.chatgpt.site/)
+- [Use the tool](https://hwanseek.shinhwa7848.chatgpt.site/)
 - [Research and guides](https://hwanseek.blogspot.com/)
 - [Instagram](https://www.instagram.com/hwan_seek/)
 
