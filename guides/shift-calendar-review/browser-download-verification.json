@@ -1,0 +1,11 @@
+{
+  "browser": "Edge",
+  "method": "Actual UI download, reopened file; independently compared every UTC start, end and summary with Python datetime arithmetic.",
+  "events": 20,
+  "daysOffExcluded": 10,
+  "allDatesTimesMatched": true,
+  "uniqueUids": 20,
+  "crlfValid": true,
+  "sha256": "383c18fd11efb75bcb593ed1608d001a2ae7a01381a20979c62a26b21e8deb7c",
+  "calendarAppImportExecuted": false
+}
