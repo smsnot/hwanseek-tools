@@ -1,0 +1,75 @@
+{
+  "method": "New SVG vector and text illustrations rendered to PNG with sharp. Not screenshots of an application.",
+  "style": {
+    "width": 1080,
+    "height": 1350,
+    "ratio": "4:5",
+    "font": "Arial / Helvetica",
+    "palette": {
+      "cream": "#FAF7EF",
+      "navy": "#07152E",
+      "teal": "#187C79",
+      "light": "#E4EFEB",
+      "line": "#D6DDD6",
+      "white": "#FFFFFF",
+      "muted": "#52636B",
+      "amber": "#956329",
+      "sand": "#F3E9D6"
+    }
+  },
+  "topic": "File List Pick",
+  "scope": "External fixture: 16 source files and 14 requests, yielding 13 names; 9 unique found, 3 missing, 1 ambiguous, 1 repeat. Explicit Camera B choice yields 10 source payload files. Core ZIP verified independently. Real IAB folder interaction reached ZIP ready. Desktop Edge downloaded the separate built-in four-text-file example; its three selected payload files and report were reopened and verified. A browser-downloaded external 16-file-fixture ZIP was not obtained.",
+  "aiDisclosure": "AI-assisted instructional diagrams; not application screenshots.",
+  "cards": [
+    {
+      "number": 1,
+      "filename": "card-01.png",
+      "width": 1080,
+      "height": 1350,
+      "alt": "Card 1 of 5. They sent a list and you need the files. A requester list contains Beach walk 01.jpg, Project brief.pdf, and IMG_0101.JPG. The workflow is to find, review, and package files across the selected folder. Enter one complete filename per line, including its extension.",
+      "headline": "They sent a list. You need the files.",
+      "status": "Visually reviewed at native dimensions on 2026-09-09"
+    },
+    {
+      "number": 2,
+      "filename": "card-02.png",
+      "width": 1080,
+      "height": 1350,
+      "alt": "Card 2 of 5. Check your existing tools. Capture One documents Filename List selection for Catalog or Session images. Everything 1.5 documents File List Slots; the 1.5 release is listed as Beta separately from 1.4. This comparison uses official documentation, not a head-to-head speed test.",
+      "headline": "Check your existing tools.",
+      "status": "Visually reviewed at native dimensions on 2026-09-09"
+    },
+    {
+      "number": 3,
+      "filename": "card-03.png",
+      "width": 1080,
+      "height": 1350,
+      "alt": "Card 3 of 5. Review the list before exporting. In the external 16-file practice folder, the 14-line list has 13 unique names: 9 names found once, 3 missing, and 1 requiring a path choice. One request is repeated. Unique matches start selected, and a repeated request does not create another copy.",
+      "headline": "Review the list before exporting.",
+      "status": "Visually reviewed at native dimensions on 2026-09-09"
+    },
+    {
+      "number": 4,
+      "filename": "card-04.png",
+      "width": 1080,
+      "height": 1350,
+      "alt": "Card 4 of 5. Same name, different files. Camera A/IMG_0101.JPG and Camera B/IMG_0101.JPG are separate candidates. Camera B is explicitly selected in the practice example. The core export produced 10 source files plus report.json; independent checks confirmed exact file bytes and unchanged original files.",
+      "headline": "Same name. Different files.",
+      "status": "Visually reviewed at native dimensions on 2026-09-09"
+    },
+    {
+      "number": 5,
+      "filename": "card-05.png",
+      "width": 1080,
+      "height": 1350,
+      "alt": "Card 5 of 5. Try it before you pick a folder. The Try a small example button loads four invented text files without accessing a folder. This built-in demo is separate from the downloadable 16-file practice folder. The tool allows up to 64 MiB of selected source files. Full guide and free tool are linked from the blog.",
+      "headline": "Try it before you pick a folder.",
+      "status": "Visually reviewed at native dimensions on 2026-09-09"
+    }
+  ],
+  "visualReview": {
+    "date": "2026-09-09",
+    "method": "Each of the five final cards viewed individually. Card4 viewed again after its footer revision.",
+    "result": "No clipping, overlaps, missing glyphs, or unclear filename text observed. Headline, body, diagrams, footer and numbering fit the established margins."
+  }
+}
