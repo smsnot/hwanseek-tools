@@ -1,0 +1,15 @@
+merged/
+└── Takeout/
+    └── Drive/
+        ├── Archive/
+        │   ├── readme.txt
+        │   └── shared-name.txt
+        ├── Projects/
+        │   ├── budget.csv
+        │   ├── launch-notes.txt
+        │   ├── shared-name.txt
+        │   └── status.json
+        └── Team Docs/
+            ├── action items.txt
+            ├── agenda.txt
+            └── 회의 메모.txt

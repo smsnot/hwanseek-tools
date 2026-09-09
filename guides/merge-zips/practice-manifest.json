@@ -1,0 +1,95 @@
+{
+  "description": "Synthetic, independent ZIP files. These are not a real Google export or split-volume archive.",
+  "archives": [
+    {
+      "file": "practice-01.zip",
+      "sha256": "239a032c1ba25de520227b19806b07999fb2941e33626daeb2462ab11727cde7",
+      "bytes": 623,
+      "files": [
+        {
+          "path": "Takeout/Drive/Projects/launch-notes.txt",
+          "bytes": 60,
+          "sha256": "0236cf35d0332e1532653bae7fc91fd1fc3725525c73bd27bec68cab9b26d8ca"
+        },
+        {
+          "path": "Takeout/Drive/Projects/shared-name.txt",
+          "bytes": 57,
+          "sha256": "221c0c23ae5d9d178c2344a3a8fd1c3bf6638b021272255c48e31d2c557bede5"
+        },
+        {
+          "path": "Takeout/Drive/Team Docs/agenda.txt",
+          "bytes": 30,
+          "sha256": "1232ccc38ea6691434c328e293ec871c4c5eed8fb707f1ac7728e907de422ce0"
+        }
+      ]
+    },
+    {
+      "file": "practice-02.zip",
+      "sha256": "969d06c0b8c757e51faef2f00f46923268de811b731e65374c388826b090ab52",
+      "bytes": 591,
+      "files": [
+        {
+          "path": "Takeout/Drive/Projects/budget.csv",
+          "bytes": 28,
+          "sha256": "420b2c3446beb771797edf3f1ca79d7cc225b9736453de48410dbfae04a0c408"
+        },
+        {
+          "path": "Takeout/Drive/Archive/shared-name.txt",
+          "bytes": 54,
+          "sha256": "d368bb4cdd7ecc5b3a908ad1014f795927d7389b07a0e4d48b52515333d369ec"
+        },
+        {
+          "path": "Takeout/Drive/Team Docs/action items.txt",
+          "bytes": 37,
+          "sha256": "e2679755dee340e90969b7e0f0f3373cab7ac231b74fb9793a48b7a63741451d"
+        }
+      ]
+    },
+    {
+      "file": "practice-03.zip",
+      "sha256": "c95e6afe68a7d46eb32d9c6298548a0b76d37eb571c5517623f023c5696b8218",
+      "bytes": 613,
+      "files": [
+        {
+          "path": "Takeout/Drive/Projects/status.json",
+          "bytes": 33,
+          "sha256": "abf98ab2f32c009ca98741cc646f723f572296f13b7ff7935255738a88949fbf"
+        },
+        {
+          "path": "Takeout/Drive/Team Docs/회의 메모.txt",
+          "bytes": 62,
+          "sha256": "4c4c97055499a9f753af8a6938889e4b2156c0dd8a274df830aa3e0706afd5aa"
+        },
+        {
+          "path": "Takeout/Drive/Archive/readme.txt",
+          "bytes": 48,
+          "sha256": "0a5d1e77a139e0ff7a05e333dbb308b1687b2da838ffd837660fda7223adef20"
+        }
+      ]
+    },
+    {
+      "file": "conflict-01.zip",
+      "sha256": "9d16caf81af4e0800a37c823cd401f1575b1f151ebdc6882a8f1e85d33a268f1",
+      "bytes": 206,
+      "files": [
+        {
+          "path": "Takeout/Drive/Projects/status.txt",
+          "bytes": 40,
+          "sha256": "c43a4c3d39c0ad2e4ea6d420cfe90dfe3ec80ecaa76d86163d2be0a73e873f15"
+        }
+      ]
+    },
+    {
+      "file": "conflict-02.zip",
+      "sha256": "47b8f9e8684bd6a4c8246ba2594e28cec74a8bf38ee2bb8cd6953a67fc0ff145",
+      "bytes": 223,
+      "files": [
+        {
+          "path": "Takeout/Drive/Projects/status.txt",
+          "bytes": 57,
+          "sha256": "6706b83340f4b6f4af2857188a2c01808178ed6c927835543c99dcad0e12a393"
+        }
+      ]
+    }
+  ]
+}

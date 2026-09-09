@@ -1,0 +1,27 @@
+{
+  "checked": "2026-09-09",
+  "sources": {
+    "reddit": "https://www.reddit.com/r/techsupport/comments/esna88/any_way_to_combine_multiple_zip_files_that_have/",
+    "google": "https://support.google.com/accounts/answer/3024190?hl=en",
+    "7zip": "https://7-zip.org/",
+    "faq": "https://7-zip.org/faq.html",
+    "gui_source": "https://github.com/ip7z/7zip/blob/main/CPP/7zip/UI/GUI/ExtractDialog.cpp",
+    "gui_resource": "https://github.com/ip7z/7zip/blob/main/CPP/7zip/UI/GUI/ExtractDialog.rc",
+    "peazip": "https://peazip.github.io/how-to-extract-rar-zip-archives.html"
+  },
+  "packaged_primary_documentation": {
+    "tool": "7-Zip 24.08",
+    "source": "Installed 7-zip.chm, extracted read-only copy",
+    "topics": [
+      "fm/plugins/7-zip/extract.htm",
+      "cmdline/switches/overwrite.htm",
+      "cmdline/commands/extract_full.htm"
+    ]
+  },
+  "claims": {
+    "reddit": "20 ZIP complaint and later commenter success reports read directly; not a measured user study.",
+    "google": "Export over configured archive size creates multiple archives.",
+    "7zip": "Free software; installed GUI/CLI documentation plus official source support named settings.",
+    "peazip": "Alternative UI and split-volume distinction; no PeaZip execution claim."
+  }
+}
