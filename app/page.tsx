@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
+import { ToolNav } from '@/components/tool-frame';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { splitText, renderText, isParagraphEdge, type JoinChoice, EXAMPLE, MAX_CHARS, MAX_BREAKS } from '@/lib/linebreaks';
@@ -57,7 +58,7 @@ export default function Home() {
   return <div className="site-shell">
     <header className="site-header"><a className="wordmark" href="/">HWAN<span>SEEK</span><span className="brand-dot" aria-hidden="true" /></a><nav aria-label="Main"><a href="https://hwanseek.blogspot.com/">Field notes ↗</a><a href="https://github.com/smsnot/hwanseek-tools">Source ↗</a></nav></header>
     <main id="main">
-      <nav className="tool-nav" aria-label="Tools"><a href="/" aria-current="page">001 · PDF line breaks</a><a href="/list-count-review">002 · List counts</a></nav>
+      <ToolNav current="/" />
       <div className="title-row"><div><p className="eyebrow">TOOL 001 / TEXT</p><h1>PDF line break review</h1><p className="intro">Copied text, awkward line breaks. Choose what to join. Keep what matters.</p></div><span className="local-badge">Free · runs in your browser</span></div>
       <section className="workspace" aria-label="Text workspace">
         <div className="editor-panel"><div className="panel-top"><label htmlFor="original"><span className="step">01</span> Original text</label><Button variant="ghost" onClick={() => replaceInput(EXAMPLE)}>Load example</Button></div><textarea id="original" value={input} onChange={e => replaceInput(e.target.value)} spellCheck={false} aria-describedby="input-hint" placeholder="Paste text copied from a PDF…" /><div className="panel-bottom" id="input-hint"><span>{input.length.toLocaleString()} characters · {parts.breaks.length} breaks</span><Button variant="ghost" disabled={!input} onClick={() => replaceInput('')}>Clear</Button></div></div>
@@ -73,3 +74,4 @@ export default function Home() {
     </main><footer><span>HWANSEEK · Small tools for everyday problems</span><a href="https://www.instagram.com/hwan_seek/">Follow the experiments ↗</a></footer>
   </div>;
 }
+

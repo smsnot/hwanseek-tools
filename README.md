@@ -1,5 +1,27 @@
 # HWANSEEK — Small browser tools
 
+## Screenshot Cut Review
+
+[Open the tool](https://hwanseek.shinhwa7848.chatgpt.site/screenshot-cut-review). Choose a PNG, JPG, or still WebP and mark several full-width horizontal bands. Review the original and result, edit or remove individual cuts, and download a PNG with visible omission markers. Overlapping or touching bands merge. Original pixel width and retained pixels are preserved in the full-size PNG; the preview is scaled. File size may increase.
+
+Limits: 20 MB, 12 million pixels, width 8,000 px, height 20,000 px, 30 cuts. No automatic ad detection, OCR, background reconstruction, redaction check, animation, or batch processing.
+
+## Subtitle Pair Review
+
+[Open the tool](https://hwanseek.shinhwa7848.chatgpt.site/subtitle-pair-review). Paste video names or select videos to read their names only. Choose subtitle files, review S01E01/1x01 episode candidates, select ambiguous pairs manually, edit output filenames, and confirm each row. Download only confirmed, valid subtitle copies as a ZIP. Contents are not rewritten. Language/forced/SDH tags require review; ambiguous generic names and parent-folder context cannot be inferred.
+
+Limits: 100 video names, 100 subtitle files, 2 MB per subtitle, 25 MB total. SRT/ASS/SSA/VTT/text SUB only; VobSub pairs are outside scope. Common Windows filename restrictions and case-insensitive output collisions are checked. There is no timing, translation, video-content, or subtitle-language analysis. Extract the ZIP and place copies beside matching videos yourself.
+
+## PDF Highlight Review
+
+[Open the tool](https://hwanseek.shinhwa7848.chatgpt.site/pdf-highlight-review). Choose an old PDF with embedded Highlight annotations and a revised text PDF. Review extracted passages, correct extraction errors, choose exact-text candidates, inspect both pages, optionally expand the left and right boundaries independently by 0–6 points, and confirm each transfer. Download a separate PDF with real yellow Highlight annotations. Existing target annotations are appended to rather than replaced; the tested existing highlight remains intact.
+
+Matching collapses whitespace but preserves case, punctuation, numbers, and hyphens. Repeated passages require choosing a location. Character positions come from PDF.js's browser text layer and can differ from original PDF glyph boundaries. Manual review and optional padding help; they do not establish perfect alignment. Old highlight colors and comments are not copied.
+
+Limits: 15 MB and 20 pages per file, 100 highlights, 8,000 text characters per page. Simple horizontal left-to-right, single-column selectable text only. No OCR, fuzzy matching, cross-page passages, flattened/external annotations, tables, multicolumn layouts, encrypted files, forms, or signature preservation. Desktop browser recommended. The output is reopened to verify page and Highlight counts before download; check appearance in your PDF reader too.
+
+All three tools process files in the browser without document uploads, AI calls, or browser-storage persistence. Ordinary hosting requests still occur. See [file-tools-comparison.md](file-tools-comparison.md) for actual synthetic tests and fair alternatives.
+
 ## List Count Review
 
 [Compare two lists](https://hwanseek.shinhwa7848.chatgpt.site/list-count-review) by occurrence counts. Repeated values count separately. One table shows each matching key, counts in A and B, the difference, and all original pasted line positions. Expand a line cell to see original values. Copy the selected view as a plain-text report, including every page.
@@ -41,3 +63,4 @@ See [comparison.md](comparison.md) for synthetic examples and clearly scoped res
 ## License
 
 MIT. Third-party dependencies retain their own licenses.
+

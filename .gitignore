@@ -37,3 +37,6 @@ next-env.d.ts
 /outputs/
 /work/
 *.tsbuildinfo
+
+# Copied from the pinned PDF.js dependency by dev/build scripts
+/public/pdf-assets/

@@ -1,5 +1,6 @@
 'use client';
 import { useMemo, useRef, useState } from 'react';
+import { ToolNav } from '@/components/tool-frame';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Textarea } from '@/components/ui/textarea';
@@ -31,7 +32,7 @@ export default function ListCountReview() {
   return <div className="site-shell list-count-tool">
     <header className="site-header"><a className="wordmark" href="/">HWAN<span>SEEK</span><span className="brand-dot" aria-hidden="true" /></a><nav aria-label="Main"><a href="https://hwanseek.blogspot.com/">Field notes ↗</a><a href="https://github.com/smsnot/hwanseek-tools">Source ↗</a></nav></header>
     <main id="main">
-      <nav className="tool-nav" aria-label="Tools"><a href="/">001 · PDF line breaks</a><a href="/list-count-review" aria-current="page">002 · List counts</a></nav>
+      <ToolNav current="/list-count-review" />
       <div className="title-row"><div><p className="eyebrow">TOOL 002 / LISTS</p><h1>List count review</h1><p className="intro">Same items, different counts? Find the gap. Trace it to your input.</p></div><span className="local-badge">Free · runs in your browser</span></div>
       <section className="workspace list-inputs" aria-label="Two lists to compare">
         <div className="editor-panel"><div className="panel-top"><label htmlFor="list-a"><span className="step">A</span> List A</label><Button variant="ghost" onClick={() => { setA(LIST_EXAMPLE_A); setB(LIST_EXAMPLE_B); setIgnoreCase(false); setTrimEdges(false); resetView(); }}>Load example</Button></div><Textarea id="list-a" value={a} onChange={e => { setA(e.target.value); resetView(); }} spellCheck={false} aria-describedby="list-hint" placeholder="One item per line…" /><div className="panel-bottom"><span>{result ? `${result.totalA} items · ${result.skippedA} blank lines skipped` : `${a.length.toLocaleString()} characters`}</span><Button variant="ghost" disabled={!a} onClick={() => { setA(''); resetView(); }}>Clear A</Button></div></div>
@@ -54,3 +55,4 @@ export default function ListCountReview() {
     </main><footer><span>HWANSEEK · Small tools for everyday problems</span><a href="https://www.instagram.com/hwan_seek/">Follow the experiments ↗</a></footer>
   </div>;
 }
+
