@@ -1,0 +1,9 @@
+{
+  "name": "hwanseek-existing-anonymizer-test",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@huggingface/transformers": "4.2.0",
+    "ibantools": "4.5.4"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "notice": "Invented synthetic test text only. Example.com addresses are not customer records. No live LLM requests are made.",
+  "cases": [
+    {"id":"ordinary_email_repeated","language":"en","text":"Reply to mara.ellison@example.com. CC mara.ellison@example.com. Keep the line break.\nThanks."},
+    {"id":"ordinary_name_repeated","language":"en","text":"Mara Ellison met Riley North. Mara Ellison will contact Riley North tomorrow."},
+    {"id":"name_email_mixed","language":"en","text":"Customer Mara Ellison emailed mara.ellison@example.com. Mara Ellison asked Riley North to reply."},
+    {"id":"unicode_email","language":"en","text":"Reply to élise.morin@example.com about the invented project."},
+    {"id":"quoted_email","language":"en","text":"Reply to \"riley north\"@example.com about the invented project."},
+    {"id":"obfuscated_email","language":"en","text":"Contact mara dot ellison at example dot com."},
+    {"id":"literal_placeholder_collision","language":"en","text":"Email: mara.ellison@example.com; literal template: <Email_1>"},
+    {"id":"nested_mapping_collision","language":"en","text":"Literal <Email_1>; email mara.ellison@example.com","options":{"denyList":["<Email_1>"]}},
+    {"id":"name_baseline_overlap","language":"en","text":"Mara Ellison met Mara Ellison."},
+    {"id":"name_deny_overlap","language":"en","text":"Mara Ellison met Mara Ellison.","options":{"denyList":["Mara"]}},
+    {"id":"lowercase_name","language":"en","text":"Customer mara ellison asked riley north to reply."},
+    {"id":"empty_text","language":"en","text":""},
+    {"id":"unicode_offsets","language":"en","text":"🌱 Café notes: mara.ellison@example.com\n\tReply to mara.ellison@example.com."}
+  ]
+}

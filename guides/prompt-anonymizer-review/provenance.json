@@ -1,0 +1,81 @@
+{
+  "checkedOn": "2026-09-10",
+  "commit": {
+    "sha": "d7d5771ffd684d1f5dde4d0ba38d3c4f8cf3d3d7",
+    "date": "2026-07-22T13:49:51Z",
+    "message": "Merge pull request #66 from akazah/claude/ci-failure-pypi-npm-nw7g9g\n\nfix(core): mask exact repeats of NER-detected values in both cores",
+    "url": "https://github.com/akazah/prompt-anonymizer/commit/d7d5771ffd684d1f5dde4d0ba38d3c4f8cf3d3d7"
+  },
+  "runtime": "v24.19.0",
+  "platform": "win32",
+  "arch": "x64",
+  "coreVersion": "0.3.3",
+  "transformersVersion": "4.2.0",
+  "ibantoolsVersion": "4.5.4",
+  "modelFiles": [
+    {
+      "file": "Xenova/bert-base-NER/config.json",
+      "bytes": 999,
+      "sha256": "a73a2eccc921bbdea95a94b49a157d3694b5c2abbae7a6f3000e14404a9c31a8"
+    },
+    {
+      "file": "Xenova/bert-base-NER/onnx/model_quantized.onnx",
+      "bytes": 108952255,
+      "sha256": "caaee70a5518ec7f9e46e5308fcc9263a8c227703a9ce46cf61c69a552349648"
+    },
+    {
+      "file": "Xenova/bert-base-NER/tokenizer.json",
+      "bytes": 668923,
+      "sha256": "343989712a36cd8b253efeaf8baf6a08b9d2583f78e395e83832e8ee9f8d8ee1"
+    },
+    {
+      "file": "Xenova/bert-base-NER/tokenizer_config.json",
+      "bytes": 385,
+      "sha256": "5be1a180e9badb4811a6c31502d70fb35a085af5457982937419c42d7530bae6"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "source": "web/packages/core/src/index.ts",
+      "sha256": "bc125cb62074d046882c039ccc5df5faf4bf97c4ebbb7f7cf3130b1047bb5046"
+    },
+    {
+      "source": "web/packages/core/src/labeling.ts",
+      "sha256": "650a7fcd0bd9080c4ef700c47447a6affd25150448dbe248f366d48caf269a99"
+    },
+    {
+      "source": "web/packages/core/src/language-detect.ts",
+      "sha256": "f9598ba7141740cdf84c7f249c9a478ca6f97d12b26e8aee59008e2ad9fb57d8"
+    },
+    {
+      "source": "web/packages/core/src/languages.ts",
+      "sha256": "b72510d6068f97ceba9e15252853c51c4d623778c1f3c3b39c30cb4208a43388"
+    },
+    {
+      "source": "web/packages/core/src/ner.ts",
+      "sha256": "3ec2fac7657467096ad80cddabca7ca42535d9a71f5d32d900ff2891f0ddff03"
+    },
+    {
+      "source": "web/packages/core/src/normalize.ts",
+      "sha256": "74fa2e2f94435c40d91c6f220b8528faf182fa7b4f90200e694bf64be64f02c1"
+    },
+    {
+      "source": "web/packages/core/src/recognizers.ts",
+      "sha256": "45c2b50c51f65494766581fc50775cc8c4f8f36bcb48168f395686b700967bf0"
+    },
+    {
+      "source": "web/packages/core/src/samples.ts",
+      "sha256": "982464b6d4c49ae51f18885dc468122823678c1c41c393845f55a1f52889ecc6"
+    },
+    {
+      "source": "web/packages/core/src/session.ts",
+      "sha256": "3b52bba107e368264a8ff56c0b1c2d8e862a0639f1e5b17e12fedac953da0d11"
+    },
+    {
+      "source": "web/packages/core/src/types.ts",
+      "sha256": "cefa47dcecfbdccd53897d5a8d11dd920850fed5c8aee0b85a4e3846319d92a0"
+    }
+  ],
+  "installation": "Workspace-only dependencies; package install scripts disabled. No account, global install, user file, real secret, or external LLM request.",
+  "execution": "Type-stripped upstream TypeScript core, not a rewritten anonymizer. Final model tests used the local cache with allowRemoteModels=false. No browser/network audit or Python-core execution."
+}

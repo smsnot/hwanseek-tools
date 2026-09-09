@@ -1,0 +1,611 @@
+{
+  "commit": "d7d5771ffd684d1f5dde4d0ba38d3c4f8cf3d3d7",
+  "node": "v24.19.0",
+  "dependencies": {
+    "transformers": "4.2.0",
+    "ibantools": "4.5.4"
+  },
+  "scope": "Actual upstream TypeScript core, with types removed only. No GUI or LLM tested. Synthetic data only.",
+  "regexOnly": [
+    {
+      "id": "ordinary_email_repeated",
+      "language": "en",
+      "text": "Reply to mara.ellison@example.com. CC mara.ellison@example.com. Keep the line break.\nThanks.",
+      "anonymized": "Reply to <Email_1>. CC <Email_1>. Keep the line break.\nThanks.",
+      "mapping": {
+        "<Email_1>": "mara.ellison@example.com"
+      },
+      "entities": [
+        {
+          "start": 9,
+          "end": 33,
+          "entityType": "EMAIL_ADDRESS",
+          "score": 0.9
+        },
+        {
+          "start": 38,
+          "end": 62,
+          "entityType": "EMAIL_ADDRESS",
+          "score": 0.9
+        }
+      ],
+      "restored": "Reply to mara.ellison@example.com. CC mara.ellison@example.com. Keep the line break.\nThanks.",
+      "exactRoundTrip": true,
+      "restoreDetails": {
+        "text": "Reply to mara.ellison@example.com. CC mara.ellison@example.com. Keep the line break.\nThanks.",
+        "replacements": [
+          {
+            "label": "<Email_1>",
+            "value": "mara.ellison@example.com",
+            "count": 2
+          }
+        ],
+        "unresolved": []
+      }
+    },
+    {
+      "id": "ordinary_name_repeated",
+      "language": "en",
+      "text": "Mara Ellison met Riley North. Mara Ellison will contact Riley North tomorrow.",
+      "anonymized": "Mara Ellison met Riley North. Mara Ellison will contact Riley North tomorrow.",
+      "mapping": {},
+      "entities": [],
+      "restored": "Mara Ellison met Riley North. Mara Ellison will contact Riley North tomorrow.",
+      "exactRoundTrip": true,
+      "restoreDetails": {
+        "text": "Mara Ellison met Riley North. Mara Ellison will contact Riley North tomorrow.",
+        "replacements": [],
+        "unresolved": []
+      }
+    },
+    {
+      "id": "name_email_mixed",
+      "language": "en",
+      "text": "Customer Mara Ellison emailed mara.ellison@example.com. Mara Ellison asked Riley North to reply.",
+      "anonymized": "Customer Mara Ellison emailed <Email_1>. Mara Ellison asked Riley North to reply.",
+      "mapping": {
+        "<Email_1>": "mara.ellison@example.com"
+      },
+      "entities": [
+        {
+          "start": 30,
+          "end": 54,
+          "entityType": "EMAIL_ADDRESS",
+          "score": 0.9
+        }
+      ],
+      "restored": "Customer Mara Ellison emailed mara.ellison@example.com. Mara Ellison asked Riley North to reply.",
+      "exactRoundTrip": true,
+      "restoreDetails": {
+        "text": "Customer Mara Ellison emailed mara.ellison@example.com. Mara Ellison asked Riley North to reply.",
+        "replacements": [
+          {
+            "label": "<Email_1>",
+            "value": "mara.ellison@example.com",
+            "count": 1
+          }
+        ],
+        "unresolved": []
+      }
+    },
+    {
+      "id": "unicode_email",
+      "language": "en",
+      "text": "Reply to élise.morin@example.com about the invented project.",
+      "anonymized": "Reply to é<Email_1> about the invented project.",
+      "mapping": {
+        "<Email_1>": "lise.morin@example.com"
+      },
+      "entities": [
+        {
+          "start": 10,
+          "end": 32,
+          "entityType": "EMAIL_ADDRESS",
+          "score": 0.9
+        }
+      ],
+      "restored": "Reply to élise.morin@example.com about the invented project.",
+      "exactRoundTrip": true,
+      "restoreDetails": {
+        "text": "Reply to élise.morin@example.com about the invented project.",
+        "replacements": [
+          {
+            "label": "<Email_1>",
+            "value": "lise.morin@example.com",
+            "count": 1
+          }
+        ],
+        "unresolved": []
+      }
+    },
+    {
+      "id": "quoted_email",
+      "language": "en",
+      "text": "Reply to \"riley north\"@example.com about the invented project.",
+      "anonymized": "Reply to \"riley north\"@example.com about the invented project.",
+      "mapping": {},
+      "entities": [],
+      "restored": "Reply to \"riley north\"@example.com about the invented project.",
+      "exactRoundTrip": true,
+      "restoreDetails": {
+        "text": "Reply to \"riley north\"@example.com about the invented project.",
+        "replacements": [],
+        "unresolved": []
+      }
+    },
+    {
+      "id": "obfuscated_email",
+      "language": "en",
+      "text": "Contact mara dot ellison at example dot com.",
+      "anonymized": "Contact mara dot ellison at example dot com.",
+      "mapping": {},
+      "entities": [],
+      "restored": "Contact mara dot ellison at example dot com.",
+      "exactRoundTrip": true,
+      "restoreDetails": {
+        "text": "Contact mara dot ellison at example dot com.",
+        "replacements": [],
+        "unresolved": []
+      }
+    },
+    {
+      "id": "literal_placeholder_collision",
+      "language": "en",
+      "text": "Email: mara.ellison@example.com; literal template: <Email_1>",
+      "anonymized": "Email: <Email_1>; literal template: <Email_1>",
+      "mapping": {
+        "<Email_1>": "mara.ellison@example.com"
+      },
+      "entities": [
+        {
+          "start": 7,
+          "end": 31,
+          "entityType": "EMAIL_ADDRESS",
+          "score": 0.9
+        }
+      ],
+      "restored": "Email: mara.ellison@example.com; literal template: mara.ellison@example.com",
+      "exactRoundTrip": false,
+      "restoreDetails": {
+        "text": "Email: mara.ellison@example.com; literal template: mara.ellison@example.com",
+        "replacements": [
+          {
+            "label": "<Email_1>",
+            "value": "mara.ellison@example.com",
+            "count": 2
+          }
+        ],
+        "unresolved": []
+      }
+    },
+    {
+      "id": "nested_mapping_collision",
+      "language": "en",
+      "text": "Literal <Email_1>; email mara.ellison@example.com",
+      "options": {
+        "denyList": [
+          "<Email_1>"
+        ]
+      },
+      "anonymized": "Literal <Custom_1>; email <Email_1>",
+      "mapping": {
+        "<Custom_1>": "<Email_1>",
+        "<Email_1>": "mara.ellison@example.com"
+      },
+      "entities": [
+        {
+          "start": 8,
+          "end": 17,
+          "entityType": "CUSTOM",
+          "score": 1
+        },
+        {
+          "start": 25,
+          "end": 49,
+          "entityType": "EMAIL_ADDRESS",
+          "score": 0.9
+        }
+      ],
+      "restored": "Literal mara.ellison@example.com; email mara.ellison@example.com",
+      "exactRoundTrip": false,
+      "restoreDetails": {
+        "text": "Literal mara.ellison@example.com; email mara.ellison@example.com",
+        "replacements": [
+          {
+            "label": "<Custom_1>",
+            "value": "<Email_1>",
+            "count": 1
+          },
+          {
+            "label": "<Email_1>",
+            "value": "mara.ellison@example.com",
+            "count": 2
+          }
+        ],
+        "unresolved": []
+      }
+    },
+    {
+      "id": "name_baseline_overlap",
+      "language": "en",
+      "text": "Mara Ellison met Mara Ellison.",
+      "anonymized": "Mara Ellison met Mara Ellison.",
+      "mapping": {},
+      "entities": [],
+      "restored": "Mara Ellison met Mara Ellison.",
+      "exactRoundTrip": true,
+      "restoreDetails": {
+        "text": "Mara Ellison met Mara Ellison.",
+        "replacements": [],
+        "unresolved": []
+      }
+    },
+    {
+      "id": "name_deny_overlap",
+      "language": "en",
+      "text": "Mara Ellison met Mara Ellison.",
+      "options": {
+        "denyList": [
+          "Mara"
+        ]
+      },
+      "anonymized": "<Custom_1> Ellison met <Custom_1> Ellison.",
+      "mapping": {
+        "<Custom_1>": "Mara"
+      },
+      "entities": [
+        {
+          "start": 0,
+          "end": 4,
+          "entityType": "CUSTOM",
+          "score": 1
+        },
+        {
+          "start": 17,
+          "end": 21,
+          "entityType": "CUSTOM",
+          "score": 1
+        }
+      ],
+      "restored": "Mara Ellison met Mara Ellison.",
+      "exactRoundTrip": true,
+      "restoreDetails": {
+        "text": "Mara Ellison met Mara Ellison.",
+        "replacements": [
+          {
+            "label": "<Custom_1>",
+            "value": "Mara",
+            "count": 2
+          }
+        ],
+        "unresolved": []
+      }
+    },
+    {
+      "id": "lowercase_name",
+      "language": "en",
+      "text": "Customer mara ellison asked riley north to reply.",
+      "anonymized": "Customer mara ellison asked riley north to reply.",
+      "mapping": {},
+      "entities": [],
+      "restored": "Customer mara ellison asked riley north to reply.",
+      "exactRoundTrip": true,
+      "restoreDetails": {
+        "text": "Customer mara ellison asked riley north to reply.",
+        "replacements": [],
+        "unresolved": []
+      }
+    },
+    {
+      "id": "empty_text",
+      "language": "en",
+      "text": "",
+      "anonymized": "",
+      "mapping": {},
+      "entities": [],
+      "restored": "",
+      "exactRoundTrip": true,
+      "restoreDetails": {
+        "text": "",
+        "replacements": [],
+        "unresolved": []
+      }
+    },
+    {
+      "id": "unicode_offsets",
+      "language": "en",
+      "text": "🌱 Café notes: mara.ellison@example.com\n\tReply to mara.ellison@example.com.",
+      "anonymized": "🌱 Café notes: <Email_1>\n\tReply to <Email_1>.",
+      "mapping": {
+        "<Email_1>": "mara.ellison@example.com"
+      },
+      "entities": [
+        {
+          "start": 15,
+          "end": 39,
+          "entityType": "EMAIL_ADDRESS",
+          "score": 0.9
+        },
+        {
+          "start": 50,
+          "end": 74,
+          "entityType": "EMAIL_ADDRESS",
+          "score": 0.9
+        }
+      ],
+      "restored": "🌱 Café notes: mara.ellison@example.com\n\tReply to mara.ellison@example.com.",
+      "exactRoundTrip": true,
+      "restoreDetails": {
+        "text": "🌱 Café notes: mara.ellison@example.com\n\tReply to mara.ellison@example.com.",
+        "replacements": [
+          {
+            "label": "<Email_1>",
+            "value": "mara.ellison@example.com",
+            "count": 2
+          }
+        ],
+        "unresolved": []
+      }
+    }
+  ],
+  "ner": [
+    {
+      "id": "ordinary_name_repeated",
+      "language": "en",
+      "text": "Mara Ellison met Riley North. Mara Ellison will contact Riley North tomorrow.",
+      "anonymized": "<Name_1> met <Name_2>. <Name_1> will contact <Name_2> tomorrow.",
+      "mapping": {
+        "<Name_1>": "Mara Ellison",
+        "<Name_2>": "Riley North"
+      },
+      "entities": [
+        {
+          "start": 0,
+          "end": 12,
+          "entityType": "PERSON",
+          "score": 0.9984700977802277
+        },
+        {
+          "start": 17,
+          "end": 28,
+          "entityType": "PERSON",
+          "score": 0.9861240386962891
+        },
+        {
+          "start": 30,
+          "end": 42,
+          "entityType": "PERSON",
+          "score": 0.9985519051551819
+        },
+        {
+          "start": 56,
+          "end": 67,
+          "entityType": "PERSON",
+          "score": 0.4093644320964813
+        }
+      ],
+      "restored": "Mara Ellison met Riley North. Mara Ellison will contact Riley North tomorrow.",
+      "exactRoundTrip": true
+    },
+    {
+      "id": "name_email_mixed",
+      "language": "en",
+      "text": "Customer Mara Ellison emailed mara.ellison@example.com. Mara Ellison asked Riley North to reply.",
+      "anonymized": "Customer <Name_1> emailed <Email_1>. <Name_1> asked <Name_2> to reply.",
+      "mapping": {
+        "<Name_1>": "Mara Ellison",
+        "<Email_1>": "mara.ellison@example.com",
+        "<Name_2>": "Riley North"
+      },
+      "entities": [
+        {
+          "start": 9,
+          "end": 21,
+          "entityType": "PERSON",
+          "score": 0.9992648959159851
+        },
+        {
+          "start": 30,
+          "end": 54,
+          "entityType": "EMAIL_ADDRESS",
+          "score": 0.9
+        },
+        {
+          "start": 56,
+          "end": 68,
+          "entityType": "PERSON",
+          "score": 0.9991319477558136
+        },
+        {
+          "start": 75,
+          "end": 86,
+          "entityType": "PERSON",
+          "score": 0.9992587268352509
+        }
+      ],
+      "restored": "Customer Mara Ellison emailed mara.ellison@example.com. Mara Ellison asked Riley North to reply.",
+      "exactRoundTrip": true
+    },
+    {
+      "id": "unicode_email",
+      "language": "en",
+      "text": "Reply to élise.morin@example.com about the invented project.",
+      "anonymized": "Reply to é<Email_1> about the invented project.",
+      "mapping": {
+        "<Email_1>": "lise.morin@example.com"
+      },
+      "entities": [
+        {
+          "start": 10,
+          "end": 32,
+          "entityType": "EMAIL_ADDRESS",
+          "score": 0.9
+        }
+      ],
+      "restored": "Reply to élise.morin@example.com about the invented project.",
+      "exactRoundTrip": true
+    },
+    {
+      "id": "quoted_email",
+      "language": "en",
+      "text": "Reply to \"riley north\"@example.com about the invented project.",
+      "anonymized": "Reply to \"riley north\"@example.com about the invented project.",
+      "mapping": {},
+      "entities": [],
+      "restored": "Reply to \"riley north\"@example.com about the invented project.",
+      "exactRoundTrip": true
+    },
+    {
+      "id": "name_baseline_overlap",
+      "language": "en",
+      "text": "Mara Ellison met Mara Ellison.",
+      "anonymized": "<Name_1> met <Name_1>.",
+      "mapping": {
+        "<Name_1>": "Mara Ellison"
+      },
+      "entities": [
+        {
+          "start": 0,
+          "end": 12,
+          "entityType": "PERSON",
+          "score": 0.9993447363376617
+        },
+        {
+          "start": 17,
+          "end": 29,
+          "entityType": "PERSON",
+          "score": 0.9992846846580505
+        }
+      ],
+      "restored": "Mara Ellison met Mara Ellison.",
+      "exactRoundTrip": true
+    },
+    {
+      "id": "name_deny_overlap",
+      "language": "en",
+      "text": "Mara Ellison met Mara Ellison.",
+      "options": {
+        "denyList": [
+          "Mara"
+        ]
+      },
+      "anonymized": "<Custom_1> Ellison met <Custom_1> Ellison.",
+      "mapping": {
+        "<Custom_1>": "Mara"
+      },
+      "entities": [
+        {
+          "start": 0,
+          "end": 4,
+          "entityType": "CUSTOM",
+          "score": 1
+        },
+        {
+          "start": 17,
+          "end": 21,
+          "entityType": "CUSTOM",
+          "score": 1
+        }
+      ],
+      "restored": "Mara Ellison met Mara Ellison.",
+      "exactRoundTrip": true
+    },
+    {
+      "id": "lowercase_name",
+      "language": "en",
+      "text": "Customer mara ellison asked riley north to reply.",
+      "anonymized": "Customer mara ellison asked riley north to reply.",
+      "mapping": {},
+      "entities": [],
+      "restored": "Customer mara ellison asked riley north to reply.",
+      "exactRoundTrip": true
+    },
+    {
+      "id": "long_prompt_late_name",
+      "language": "en",
+      "text": "The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. Customer Mara Ellison asked for an answer.",
+      "anonymized": "The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. Customer Mara Ellison asked for an answer.",
+      "mapping": {},
+      "entities": [],
+      "restored": "The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. The sample contains ordinary project notes. Customer Mara Ellison asked for an answer.",
+      "exactRoundTrip": true
+    }
+  ],
+  "session": [
+    {
+      "id": "restore_first_after_second_session",
+      "firstAnonymized": "Write to <Email_1>.",
+      "restored": {
+        "text": "Write to riley.north@example.com.",
+        "replacements": [
+          {
+            "label": "<Email_1>",
+            "value": "riley.north@example.com",
+            "count": 1
+          }
+        ],
+        "unresolved": []
+      },
+      "expected": "Write to mara.ellison@example.com.",
+      "classification": "Latest-mapping session limitation; no concurrent execution required."
+    },
+    {
+      "id": "clear_during_inflight_anonymize",
+      "mappingImmediatelyAfterClear": null,
+      "mappingAfterCompletion": {
+        "<Email_1>": "mara.ellison@example.com"
+      },
+      "classification": "Executed upstream RestoreSession with a deterministic delayed adapter around the actual upstream anonymizer. UI not tested."
+    },
+    {
+      "id": "synthetic_llm_reply",
+      "reply": "<Email_1>",
+      "restored": {
+        "text": "mara.ellison@example.com",
+        "replacements": [
+          {
+            "label": "<Email_1>",
+            "value": "mara.ellison@example.com",
+            "count": 1
+          }
+        ],
+        "unresolved": []
+      }
+    },
+    {
+      "id": "synthetic_llm_reply",
+      "reply": "&lt;Email_1&gt;",
+      "restored": {
+        "text": "&lt;Email_1&gt;",
+        "replacements": [],
+        "unresolved": []
+      }
+    },
+    {
+      "id": "synthetic_llm_reply",
+      "reply": "<Email_99>",
+      "restored": {
+        "text": "<Email_99>",
+        "replacements": [],
+        "unresolved": [
+          "<Email_99>"
+        ]
+      }
+    },
+    {
+      "id": "synthetic_llm_reply",
+      "reply": "Email_1",
+      "restored": {
+        "text": "Email_1",
+        "replacements": [],
+        "unresolved": []
+      }
+    }
+  ],
+  "nerStatus": {
+    "status": "executed",
+    "model": "Xenova/bert-base-NER",
+    "device": "cpu",
+    "remoteModelDownloadsAllowed": false
+  }
+}
