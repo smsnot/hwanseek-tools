@@ -3,6 +3,7 @@
 ## Practical guides
 
 - [Keep CSV identifiers intact in Google Sheets](guides/google-sheets-csv/): free practice files, a tested import setting, and numeric amount conversion while identifiers remain text.
+- [Save selected Google Docs pages as a PDF](guides/google-docs-pdf/): a free practice document, page-range instructions, and the checked two-page PDF output.
 
 ## Image Fit Review
 
