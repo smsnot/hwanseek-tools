@@ -1,0 +1,6 @@
+record_label,identifier,amount
+Leading zeros,00123,12.50
+Short ID,0007,0.00
+Long ID,12345678901234567,99.95
+E-like ID,123E5,7.25
+All-zero ID,00000,3.30
