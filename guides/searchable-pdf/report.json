@@ -1,0 +1,916 @@
+{
+  "created_utc": "2026-09-09T12:14:48.382654+00:00",
+  "method": {
+    "pdfs_opened_read_only": true,
+    "oracle_sha256": "0d0d663708d7f8204f8efbc91a1e308904c33fa0340a8b04c12a4d519598f3ce",
+    "whitespace_normalization": "Collapse every whitespace run to one ASCII space and strip endpoints. No case folding, punctuation replacement, or character corrections.",
+    "extractors": [
+      "pypdf",
+      "PDFium via pypdfium2"
+    ],
+    "search_check": "Case-sensitive substring tests against each page's separately extracted text; not a claim that a specific reader UI was exercised.",
+    "render_dpi": 120,
+    "render_engine": "pdftoppm version 26.07.0",
+    "visual_limit": "Pixel comparison applies only to these files and this renderer at the stated DPI, not byte identity or all PDF renderers.",
+    "known_upstream_warning": "Main task reported SixLabors.Fonts 'Table name missing' during OCR with exit code 0. This script validates the written PDF instead of relying on the exit code.",
+    "independent_validator_performed_no_ocr": true
+  },
+  "cases": [
+    {
+      "case": "clean",
+      "input": "fixtures/clean-image-only.pdf",
+      "output": "results/clean-searchable.pdf",
+      "status": "validated",
+      "input_sha256": "24bfbe359126409e12dc6d3394ec40baf457b47f1d1b1e6db814586024b07951",
+      "output_sha256": "a63615f7376368eb4ade6f1daec6c1119215803bfadb0fa306402de2f5f1f0d0",
+      "fixture_manifest_hash_matches": true,
+      "input_bytes": 382594,
+      "output_bytes": 375607,
+      "expected_pages": 2,
+      "input_pages": 2,
+      "output_pages": 2,
+      "page_count_matches": true,
+      "pages": [
+        {
+          "page": 1,
+          "expected_text": "HWANSEEK\nMAPLE project notes\nSynthetic practice page 1 of 2\nProject ID: MAPLE-0427\nPurpose: prepare a small desk organizer.\nKeep the cobalt notebook beside the sample tray.\nInventory\nTray count: 18\nLabel set: BATCH-0018\nReference amount: 73.50\nReview note: The blue insert stays in Box 4.\nNext step\nCheck the printed list before filing the pages.\nThese are invented notes, not a real order.\nHWANSEEK - English OCR practice - Page 1\n",
+          "input_text": "",
+          "output_text": "HWANSEEK\nMAPLE project notes\nSynthetic practice page 1 of 2\nProject ID: MAPLE-0427\nPurpose: prepare a small desk organizer.\nKeep the cobalt notebook beside the sample tray.\nInventory\nTray count: 18\nLabel set: BATCH-0018\nReference amount: 73.50\nReview note: The blue insert stays in Box 4.\nNext step\nCheck the printed list before filing the pages.\nThese are invented notes, not a real order.\nHWANSEEK - English OCR practice - Page 1\n",
+          "input_text_pdfium": "",
+          "output_text_pdfium": "HWANSEEK\r\nMAPLE project notes\r\nSynthetic practice page 1 of 2\r\nProject ID: MAPLE-0427\r\nPurpose: prepare a small desk organizer.\r\nKeep the cobalt notebook beside the sample tray.\r\nInventory\r\nTray count: 18\r\nLabel set: BATCH-0018\r\nReference amount: 73.50\r\nReview note: The blue insert stays in Box 4.\r\nNext step\r\nCheck the printed list before filing the pages.\r\nThese are invented notes, not a real order.\r\nHWANSEEK - English OCR practice - Page 1",
+          "input_matches_expected_initial_normalized": true,
+          "output_matches_full_oracle_normalized": true,
+          "output_matches_full_oracle_pdfium_normalized": true,
+          "output_matches_full_oracle_raw": true,
+          "output_preserves_input_normalized": false,
+          "extractors_agree_normalized": true,
+          "geometry_before": {
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0
+          },
+          "geometry_after": {
+            "media_box": [
+              0.0,
+              0.0,
+              612.001,
+              792.002
+            ],
+            "crop_box": [
+              0.0,
+              0.0,
+              612.001,
+              792.002
+            ],
+            "rotation": 0
+          },
+          "geometry_matches": false,
+          "max_box_coordinate_delta_points": 0.0019999999999527063,
+          "search_terms": [
+            {
+              "term": "MAPLE-0427",
+              "visually_expected_on_page": true,
+              "found_before": false,
+              "found_after": true,
+              "count_before": 0,
+              "count_after": 1,
+              "found_before_pdfium": false,
+              "found_after_pdfium": true
+            },
+            {
+              "term": "cobalt notebook",
+              "visually_expected_on_page": true,
+              "found_before": false,
+              "found_after": true,
+              "count_before": 0,
+              "count_after": 1,
+              "found_before_pdfium": false,
+              "found_after_pdfium": true
+            },
+            {
+              "term": "BATCH-0018",
+              "visually_expected_on_page": true,
+              "found_before": false,
+              "found_after": true,
+              "count_before": 0,
+              "count_after": 1,
+              "found_before_pdfium": false,
+              "found_after_pdfium": true
+            },
+            {
+              "term": "73.50",
+              "visually_expected_on_page": true,
+              "found_before": false,
+              "found_after": true,
+              "count_before": 0,
+              "count_after": 1,
+              "found_before_pdfium": false,
+              "found_after_pdfium": true
+            },
+            {
+              "term": "LAMP-6209",
+              "visually_expected_on_page": false,
+              "found_before": false,
+              "found_after": false,
+              "count_before": 0,
+              "count_after": 0,
+              "found_before_pdfium": false,
+              "found_after_pdfium": false
+            }
+          ],
+          "text_differences": [],
+          "visual_comparison": {
+            "before_pixels": [
+              1020,
+              1320
+            ],
+            "after_pixels": [
+              1021,
+              1321
+            ],
+            "comparable": false,
+            "reason": "different rendered dimensions"
+          },
+          "same_canvas_visual_comparison": {
+            "method": "Separate fresh Poppler renders forced to the input pixel width and height. This compensates for page-size rounding and is not evidence of exact geometric preservation.",
+            "before_pixels": [
+              1020,
+              1320
+            ],
+            "after_pixels": [
+              1020,
+              1320
+            ],
+            "comparable": true,
+            "pixel_identical": false,
+            "changed_pixel_count": 424125,
+            "changed_pixel_fraction": 0.3150066844919786,
+            "mean_absolute_channel_difference": 1.448530154486037,
+            "rms_channel_difference": 10.742638216318294,
+            "max_channel_difference": 236,
+            "changed_bbox_xyxy": [
+              0,
+              1,
+              1020,
+              1320
+            ]
+          }
+        },
+        {
+          "page": 2,
+          "expected_text": "HWANSEEK\nMAPLE review checklist\nSynthetic practice page 2 of 2\nProject ID: MAPLE-0427\nKeep the amber folder on the lower shelf.\nLeave enough space for the spare dividers.\nReview checklist\nReference code: LAMP-6209\nCheck count: 24\nReview date: 2026-08-14\nStatus: ready for a second review.\nBefore filing\nCompare names, numbers, and punctuation.\nThese are invented notes, not a real order.\nHWANSEEK - English OCR practice - Page 2\n",
+          "input_text": "",
+          "output_text": "HWANSEEK\nMAPLE review checklist\nSynthetic practice page 2 of 2\nProject ID: MAPLE-0427\nKeep the amber folder on the lower shelf.\nLeave enough space for the spare dividers.\nReview checklist\nReference code: LAMP-6209\nCheck count: 24\nReview date: 2026-08-14\nStatus: ready for a second review.\nBefore filing\nCompare names, numbers, and punctuation.\nThese are invented notes, not a real order.\nHWANSEEK - English OCR practice - Page 2\n",
+          "input_text_pdfium": "",
+          "output_text_pdfium": "HWANSEEK\r\nMAPLE review checklist\r\nSynthetic practice page 2 of 2\r\nProject ID: MAPLE-0427\r\nKeep the amber folder on the lower shelf.\r\nLeave enough space for the spare dividers.\r\nReview checklist\r\nReference code: LAMP-6209\r\nCheck count: 24\r\nReview date: 2026-08-14\r\nStatus: ready for a second review.\r\nBefore filing\r\nCompare names, numbers, and punctuation.\r\nThese are invented notes, not a real order.\r\nHWANSEEK - English OCR practice - Page 2",
+          "input_matches_expected_initial_normalized": true,
+          "output_matches_full_oracle_normalized": true,
+          "output_matches_full_oracle_pdfium_normalized": true,
+          "output_matches_full_oracle_raw": true,
+          "output_preserves_input_normalized": false,
+          "extractors_agree_normalized": true,
+          "geometry_before": {
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0
+          },
+          "geometry_after": {
+            "media_box": [
+              0.0,
+              0.0,
+              612.001,
+              792.002
+            ],
+            "crop_box": [
+              0.0,
+              0.0,
+              612.001,
+              792.002
+            ],
+            "rotation": 0
+          },
+          "geometry_matches": false,
+          "max_box_coordinate_delta_points": 0.0019999999999527063,
+          "search_terms": [
+            {
+              "term": "MAPLE-0427",
+              "visually_expected_on_page": true,
+              "found_before": false,
+              "found_after": true,
+              "count_before": 0,
+              "count_after": 1,
+              "found_before_pdfium": false,
+              "found_after_pdfium": true
+            },
+            {
+              "term": "cobalt notebook",
+              "visually_expected_on_page": false,
+              "found_before": false,
+              "found_after": false,
+              "count_before": 0,
+              "count_after": 0,
+              "found_before_pdfium": false,
+              "found_after_pdfium": false
+            },
+            {
+              "term": "BATCH-0018",
+              "visually_expected_on_page": false,
+              "found_before": false,
+              "found_after": false,
+              "count_before": 0,
+              "count_after": 0,
+              "found_before_pdfium": false,
+              "found_after_pdfium": false
+            },
+            {
+              "term": "73.50",
+              "visually_expected_on_page": false,
+              "found_before": false,
+              "found_after": false,
+              "count_before": 0,
+              "count_after": 0,
+              "found_before_pdfium": false,
+              "found_after_pdfium": false
+            },
+            {
+              "term": "LAMP-6209",
+              "visually_expected_on_page": true,
+              "found_before": false,
+              "found_after": true,
+              "count_before": 0,
+              "count_after": 1,
+              "found_before_pdfium": false,
+              "found_after_pdfium": true
+            }
+          ],
+          "text_differences": [],
+          "visual_comparison": {
+            "before_pixels": [
+              1020,
+              1320
+            ],
+            "after_pixels": [
+              1021,
+              1321
+            ],
+            "comparable": false,
+            "reason": "different rendered dimensions"
+          },
+          "same_canvas_visual_comparison": {
+            "method": "Separate fresh Poppler renders forced to the input pixel width and height. This compensates for page-size rounding and is not evidence of exact geometric preservation.",
+            "before_pixels": [
+              1020,
+              1320
+            ],
+            "after_pixels": [
+              1020,
+              1320
+            ],
+            "comparable": true,
+            "pixel_identical": false,
+            "changed_pixel_count": 424916,
+            "changed_pixel_fraction": 0.3155941770647653,
+            "mean_absolute_channel_difference": 1.4902473262032085,
+            "rms_channel_difference": 10.899950155789375,
+            "max_channel_difference": 236,
+            "changed_bbox_xyxy": [
+              0,
+              1,
+              1020,
+              1320
+            ]
+          }
+        }
+      ],
+      "pdf_hashes_unchanged_during_validation": {
+        "input": true,
+        "output": true
+      },
+      "output_distributed": true
+    },
+    {
+      "case": "degraded",
+      "input": "fixtures/degraded-image-only.pdf",
+      "output": "results/degraded-searchable.pdf",
+      "status": "validated",
+      "input_sha256": "9a5c600b7d76e8f0ebed8c25332b5e2afe7de0ced2133b177604a5bd5b48b4dc",
+      "output_sha256": "a49dccff7a0e81dadc893e1182fa70342e2c297aa87a98f474f69c5aac2ed383",
+      "fixture_manifest_hash_matches": true,
+      "input_bytes": 56801,
+      "output_bytes": 64253,
+      "expected_pages": 1,
+      "input_pages": 1,
+      "output_pages": 1,
+      "page_count_matches": true,
+      "pages": [
+        {
+          "page": 1,
+          "expected_text": "HWANSEEK\nMAPLE project notes\nSynthetic practice page 1 of 2\nProject ID: MAPLE-0427\nPurpose: prepare a small desk organizer.\nKeep the cobalt notebook beside the sample tray.\nInventory\nTray count: 18\nLabel set: BATCH-0018\nReference amount: 73.50\nReview note: The blue insert stays in Box 4.\nNext step\nCheck the printed list before filing the pages.\nThese are invented notes, not a real order.\nHWANSEEK - English OCR practice - Page 1\n",
+          "input_text": "",
+          "output_text": "HWANSEEK\nMAPLE project notes\n‘Synihietic penctice page 1 of 2\nProject 1D: MAPLE-0427\nPurpose: prepare a small desk organizer.\nKeep the cobalt notebook beside the sample tray.\nInventory\n‘Tray count: 18\nLabel set: BATCH-0018\nReference amount: 73.50\nReview note: The blue insert stays in Box 4.\nNext step\nCheck the printed list before filing the pages:\nThese are invented notes, not a real order.\nHVANSEEKC: Engiah OCR practice -Page 1\n",
+          "input_text_pdfium": "",
+          "output_text_pdfium": "HWANSEEK\r\nMAPLE project notes\r\n‘Synihietic penctice page 1 of 2\r\nProject 1D: MAPLE-0427\r\nPurpose: prepare a small desk organizer.\r\nKeep the cobalt notebook beside the sample tray.\r\nInventory\r\n‘Tray count: 18\r\nLabel set: BATCH-0018\r\nReference amount: 73.50\r\nReview note: The blue insert stays in Box 4.\r\nNext step\r\nCheck the printed list before filing the pages:\r\nThese are invented notes, not a real order.\r\nHVANSEEKC: Engiah OCR practice -Page 1",
+          "input_matches_expected_initial_normalized": true,
+          "output_matches_full_oracle_normalized": false,
+          "output_matches_full_oracle_pdfium_normalized": false,
+          "output_matches_full_oracle_raw": false,
+          "output_preserves_input_normalized": false,
+          "extractors_agree_normalized": true,
+          "geometry_before": {
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0
+          },
+          "geometry_after": {
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0
+          },
+          "geometry_matches": true,
+          "max_box_coordinate_delta_points": 0.0,
+          "search_terms": [
+            {
+              "term": "MAPLE-0427",
+              "visually_expected_on_page": true,
+              "found_before": false,
+              "found_after": true,
+              "count_before": 0,
+              "count_after": 1,
+              "found_before_pdfium": false,
+              "found_after_pdfium": true
+            },
+            {
+              "term": "cobalt notebook",
+              "visually_expected_on_page": true,
+              "found_before": false,
+              "found_after": true,
+              "count_before": 0,
+              "count_after": 1,
+              "found_before_pdfium": false,
+              "found_after_pdfium": true
+            },
+            {
+              "term": "BATCH-0018",
+              "visually_expected_on_page": true,
+              "found_before": false,
+              "found_after": true,
+              "count_before": 0,
+              "count_after": 1,
+              "found_before_pdfium": false,
+              "found_after_pdfium": true
+            },
+            {
+              "term": "73.50",
+              "visually_expected_on_page": true,
+              "found_before": false,
+              "found_after": true,
+              "count_before": 0,
+              "count_after": 1,
+              "found_before_pdfium": false,
+              "found_after_pdfium": true
+            },
+            {
+              "term": "LAMP-6209",
+              "visually_expected_on_page": false,
+              "found_before": false,
+              "found_after": false,
+              "count_before": 0,
+              "count_after": 0,
+              "found_before_pdfium": false,
+              "found_after_pdfium": false
+            }
+          ],
+          "text_differences": [
+            {
+              "operation": "insert",
+              "expected": "",
+              "actual": "‘",
+              "expected_span": [
+                29,
+                29
+              ],
+              "actual_span": [
+                29,
+                30
+              ]
+            },
+            {
+              "operation": "replace",
+              "expected": "t",
+              "actual": "i",
+              "expected_span": [
+                32,
+                33
+              ],
+              "actual_span": [
+                33,
+                34
+              ]
+            },
+            {
+              "operation": "insert",
+              "expected": "",
+              "actual": "i",
+              "expected_span": [
+                34,
+                34
+              ],
+              "actual_span": [
+                35,
+                36
+              ]
+            },
+            {
+              "operation": "replace",
+              "expected": "ra",
+              "actual": "en",
+              "expected_span": [
+                40,
+                42
+              ],
+              "actual_span": [
+                42,
+                44
+              ]
+            },
+            {
+              "operation": "replace",
+              "expected": "I",
+              "actual": "1",
+              "expected_span": [
+                68,
+                69
+              ],
+              "actual_span": [
+                70,
+                71
+              ]
+            },
+            {
+              "operation": "insert",
+              "expected": "",
+              "actual": "‘",
+              "expected_span": [
+                183,
+                183
+              ],
+              "actual_span": [
+                185,
+                186
+              ]
+            },
+            {
+              "operation": "replace",
+              "expected": ".",
+              "actual": ":",
+              "expected_span": [
+                345,
+                346
+              ],
+              "actual_span": [
+                348,
+                349
+              ]
+            },
+            {
+              "operation": "replace",
+              "expected": "W",
+              "actual": "V",
+              "expected_span": [
+                392,
+                393
+              ],
+              "actual_span": [
+                395,
+                396
+              ]
+            },
+            {
+              "operation": "replace",
+              "expected": " -",
+              "actual": "C:",
+              "expected_span": [
+                399,
+                401
+              ],
+              "actual_span": [
+                402,
+                404
+              ]
+            },
+            {
+              "operation": "delete",
+              "expected": "l",
+              "actual": "",
+              "expected_span": [
+                405,
+                406
+              ],
+              "actual_span": [
+                408,
+                408
+              ]
+            },
+            {
+              "operation": "replace",
+              "expected": "s",
+              "actual": "a",
+              "expected_span": [
+                407,
+                408
+              ],
+              "actual_span": [
+                409,
+                410
+              ]
+            },
+            {
+              "operation": "delete",
+              "expected": " ",
+              "actual": "",
+              "expected_span": [
+                424,
+                425
+              ],
+              "actual_span": [
+                426,
+                426
+              ]
+            }
+          ],
+          "visual_comparison": {
+            "before_pixels": [
+              1020,
+              1320
+            ],
+            "after_pixels": [
+              1020,
+              1320
+            ],
+            "comparable": true,
+            "pixel_identical": false,
+            "changed_pixel_count": 103888,
+            "changed_pixel_fraction": 0.07715983363042186,
+            "mean_absolute_channel_difference": 0.11191844919786097,
+            "rms_channel_difference": 0.4550885792604139,
+            "max_channel_difference": 10,
+            "changed_bbox_xyxy": [
+              79,
+              79,
+              934,
+              1255
+            ]
+          }
+        }
+      ],
+      "pdf_hashes_unchanged_during_validation": {
+        "input": true,
+        "output": true
+      },
+      "output_distributed": true
+    },
+    {
+      "case": "control",
+      "input": "fixtures/existing-text-control.pdf",
+      "output": "control-searchable-cli.pdf (not distributed)",
+      "status": "validated",
+      "input_sha256": "bd93aa55ced071c855a37bf76cf4ff1063ff56565e8ce998a057bfccb3fe762a",
+      "output_sha256": "643193d7e2206f082818b25968d95fe662187fa343f0ea8500eaeaef5f02f22d",
+      "fixture_manifest_hash_matches": true,
+      "input_bytes": 263563,
+      "output_bytes": 335432,
+      "expected_pages": 2,
+      "input_pages": 2,
+      "output_pages": 2,
+      "page_count_matches": true,
+      "pages": [
+        {
+          "page": 1,
+          "expected_text": "HWANSEEK\nMAPLE project notes\nSynthetic practice page 1 of 2\nProject ID: MAPLE-0427\nPurpose: prepare a small desk organizer.\nKeep the cobalt notebook beside the sample tray.\nInventory\nTray count: 18\nLabel set: BATCH-0018\nReference amount: 73.50\nReview note: The blue insert stays in Box 4.\nNext step\nCheck the printed list before filing the pages.\nThese are invented notes, not a real order.\nHWANSEEK - English OCR practice - Page 1\n",
+          "input_text": "HWANSEEK\nMAPLE project notes\nSynthetic practice page 1 of 2\nProject ID: MAPLE-0427\nPurpose: prepare a small desk organizer.\nKeep the cobalt notebook beside the sample tray.\nInventory\nTray count: 18\nLabel set: BATCH-0018\nReference amount: 73.50\nReview note: The blue insert stays in Box 4.\nNext step\nCheck the printed list before filing the pages.\nThese are invented notes, not a real order.\nHWANSEEK - English OCR practice - Page 1\n",
+          "output_text": "HWANSEEK\nMAPLE project notes\nSynthetic practice page 1 of 2\nProject ID: MAPLE-0427\nPurpose: prepare a small desk organizer.\nKeep the cobalt notebook beside the sample tray.\nInventory\nTray count: 18\nLabel set: BATCH-0018\nReference amount: 73.50\nReview note: The blue insert stays in Box 4.\nNext step\nCheck the printed list before filing the pages.\nThese are invented notes, not a real order.\nHWANSEEK - English OCR practice - Page 1\n",
+          "input_text_pdfium": "HWANSEEK\r\nMAPLE project notes\r\nSynthetic practice page 1 of 2\r\nProject ID: MAPLE-0427\r\nPurpose: prepare a small desk organizer.\r\nKeep the cobalt notebook beside the sample tray.\r\nInventory\r\nTray count: 18\r\nLabel set: BATCH-0018\r\nReference amount: 73.50\r\nReview note: The blue insert stays in Box 4.\r\nNext step\r\nCheck the printed list before filing the pages.\r\nThese are invented notes, not a real order.\r\nHWANSEEK - English OCR practice - Page 1",
+          "output_text_pdfium": "HWANSEEK\r\nMAPLE project notes\r\nSynthetic practice page 1 of 2\r\nProject ID: MAPLE-0427\r\nPurpose: prepare a small desk organizer.\r\nKeep the cobalt notebook beside the sample tray.\r\nInventory\r\nTray count: 18\r\nLabel set: BATCH-0018\r\nReference amount: 73.50\r\nReview note: The blue insert stays in Box 4.\r\nNext step\r\nCheck the printed list before filing the pages.\r\nThese are invented notes, not a real order.\r\nHWANSEEK - English OCR practice - Page 1",
+          "input_matches_expected_initial_normalized": true,
+          "output_matches_full_oracle_normalized": true,
+          "output_matches_full_oracle_pdfium_normalized": true,
+          "output_matches_full_oracle_raw": true,
+          "output_preserves_input_normalized": true,
+          "extractors_agree_normalized": true,
+          "geometry_before": {
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0
+          },
+          "geometry_after": {
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0
+          },
+          "geometry_matches": true,
+          "max_box_coordinate_delta_points": 0.0,
+          "search_terms": [
+            {
+              "term": "MAPLE-0427",
+              "visually_expected_on_page": true,
+              "found_before": true,
+              "found_after": true,
+              "count_before": 1,
+              "count_after": 1,
+              "found_before_pdfium": true,
+              "found_after_pdfium": true
+            },
+            {
+              "term": "cobalt notebook",
+              "visually_expected_on_page": true,
+              "found_before": true,
+              "found_after": true,
+              "count_before": 1,
+              "count_after": 1,
+              "found_before_pdfium": true,
+              "found_after_pdfium": true
+            },
+            {
+              "term": "BATCH-0018",
+              "visually_expected_on_page": true,
+              "found_before": true,
+              "found_after": true,
+              "count_before": 1,
+              "count_after": 1,
+              "found_before_pdfium": true,
+              "found_after_pdfium": true
+            },
+            {
+              "term": "73.50",
+              "visually_expected_on_page": true,
+              "found_before": true,
+              "found_after": true,
+              "count_before": 1,
+              "count_after": 1,
+              "found_before_pdfium": true,
+              "found_after_pdfium": true
+            },
+            {
+              "term": "LAMP-6209",
+              "visually_expected_on_page": false,
+              "found_before": false,
+              "found_after": false,
+              "count_before": 0,
+              "count_after": 0,
+              "found_before_pdfium": false,
+              "found_after_pdfium": false
+            }
+          ],
+          "text_differences": [],
+          "visual_comparison": {
+            "before_pixels": [
+              1020,
+              1320
+            ],
+            "after_pixels": [
+              1020,
+              1320
+            ],
+            "comparable": true,
+            "pixel_identical": true,
+            "changed_pixel_count": 0,
+            "changed_pixel_fraction": 0.0,
+            "mean_absolute_channel_difference": 0.0,
+            "rms_channel_difference": 0.0,
+            "max_channel_difference": 0,
+            "changed_bbox_xyxy": null
+          }
+        },
+        {
+          "page": 2,
+          "expected_text": "Mixed-page control: real header, image body\nHWANSEEK\nMAPLE project notes\nSynthetic practice page 1 of 2\nProject ID: MAPLE-0427\nPurpose: prepare a small desk organizer.\nKeep the cobalt notebook beside the sample tray.\nInventory\nTray count: 18\nLabel set: BATCH-0018\nReference amount: 73.50\nReview note: The blue insert stays in Box 4.\nNext step\nCheck the printed list before filing the pages.\nThese are invented notes, not a real order.\nHWANSEEK - English OCR practice - Page 1\n",
+          "input_text": "Mixed-page control: real header, image body\n",
+          "output_text": "Mixed-page control: real header, image body\n",
+          "input_text_pdfium": "Mixed-page control: real header, image body",
+          "output_text_pdfium": "Mixed-page control: real header, image body",
+          "input_matches_expected_initial_normalized": true,
+          "output_matches_full_oracle_normalized": false,
+          "output_matches_full_oracle_pdfium_normalized": false,
+          "output_matches_full_oracle_raw": false,
+          "output_preserves_input_normalized": true,
+          "extractors_agree_normalized": true,
+          "geometry_before": {
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0
+          },
+          "geometry_after": {
+            "media_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "crop_box": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0
+          },
+          "geometry_matches": true,
+          "max_box_coordinate_delta_points": 0.0,
+          "search_terms": [
+            {
+              "term": "MAPLE-0427",
+              "visually_expected_on_page": true,
+              "found_before": false,
+              "found_after": false,
+              "count_before": 0,
+              "count_after": 0,
+              "found_before_pdfium": false,
+              "found_after_pdfium": false
+            },
+            {
+              "term": "cobalt notebook",
+              "visually_expected_on_page": true,
+              "found_before": false,
+              "found_after": false,
+              "count_before": 0,
+              "count_after": 0,
+              "found_before_pdfium": false,
+              "found_after_pdfium": false
+            },
+            {
+              "term": "BATCH-0018",
+              "visually_expected_on_page": true,
+              "found_before": false,
+              "found_after": false,
+              "count_before": 0,
+              "count_after": 0,
+              "found_before_pdfium": false,
+              "found_after_pdfium": false
+            },
+            {
+              "term": "73.50",
+              "visually_expected_on_page": true,
+              "found_before": false,
+              "found_after": false,
+              "count_before": 0,
+              "count_after": 0,
+              "found_before_pdfium": false,
+              "found_after_pdfium": false
+            },
+            {
+              "term": "LAMP-6209",
+              "visually_expected_on_page": false,
+              "found_before": false,
+              "found_after": false,
+              "count_before": 0,
+              "count_after": 0,
+              "found_before_pdfium": false,
+              "found_after_pdfium": false
+            }
+          ],
+          "text_differences": [
+            {
+              "operation": "delete",
+              "expected": " HWANSEEK MAPLE project notes Synthetic practice page 1 of 2 Project ID: MAPLE-0427 Purpose: prepare a small desk organizer. Keep the cobalt notebook beside the sample tray. Inventory Tray count: 18 Label set: BATCH-0018 Reference amount: 73.50 Review note: The blue insert stays in Box 4. Next step Check the printed list before filing the pages. These are invented notes, not a real order. HWANSEEK - English OCR practice - Page 1",
+              "actual": "",
+              "expected_span": [
+                43,
+                475
+              ],
+              "actual_span": [
+                43,
+                43
+              ]
+            }
+          ],
+          "visual_comparison": {
+            "before_pixels": [
+              1020,
+              1320
+            ],
+            "after_pixels": [
+              1020,
+              1320
+            ],
+            "comparable": true,
+            "pixel_identical": true,
+            "changed_pixel_count": 0,
+            "changed_pixel_fraction": 0.0,
+            "mean_absolute_channel_difference": 0.0,
+            "rms_channel_difference": 0.0,
+            "max_channel_difference": 0,
+            "changed_bbox_xyxy": null
+          }
+        }
+      ],
+      "pdf_hashes_unchanged_during_validation": {
+        "input": true,
+        "output": true
+      },
+      "output_distributed": false
+    }
+  ],
+  "oracle_and_manifest_unchanged": {
+    "expected-transcription.json": true,
+    "fixture-manifest.json": true
+  },
+  "title": "NAPS2 searchable PDF: page-specific independent verification",
+  "ocr_execution": {
+    "version": "NAPS2 8.3.2",
+    "distribution": "Official Windows x64 portable archive",
+    "platform": "Windows",
+    "language": "English (eng)",
+    "mode": "Fast (default)",
+    "interface": "NAPS2.Console.exe",
+    "language_setup_arguments": [
+      "--install",
+      "ocr-eng"
+    ],
+    "processing_arguments": [
+      "-i",
+      "<input.pdf>",
+      "-o",
+      "<new-output.pdf>",
+      "-n",
+      "0",
+      "--ocrlang",
+      "eng"
+    ],
+    "graphical_steps_directly_tested": false,
+    "graphical_steps_source": "https://www.naps2.com/doc/ocr",
+    "reader_find_copy_interface_tested": false,
+    "note": "PDF text was checked independently using two parsers; the independent validator did not itself perform OCR."
+  },
+  "public_pdf_count": 5,
+  "public_pdf_scope": "Three inputs and two actual NAPS2 outputs. Control output retained only for internal verification."
+}

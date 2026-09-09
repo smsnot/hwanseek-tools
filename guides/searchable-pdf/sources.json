@@ -1,0 +1,189 @@
+{
+  "research_date": "2026-09-09",
+  "status": "Sources reviewed; actual NAPS2 processing and independent checks recorded in report.json.",
+  "sources": [
+    {
+      "id": "N1",
+      "title": "NAPS2 official home",
+      "url": "https://www.naps2.com/",
+      "type": "official_product",
+      "claims": [
+        "Free for individuals and businesses",
+        "Windows, Mac, Linux",
+        "More than 100 OCR languages"
+      ],
+      "access": "direct"
+    },
+    {
+      "id": "N2",
+      "title": "NAPS2 Download",
+      "url": "https://www.naps2.com/download",
+      "type": "official_product",
+      "claims": [
+        "Latest release observed: 8.3.2",
+        "Release updated July 22, 2026",
+        "Windows x64 portable ZIP"
+      ],
+      "access": "direct"
+    },
+    {
+      "id": "N3",
+      "title": "NAPS2 Windows Scanning",
+      "url": "https://www.naps2.com/windows-scanning",
+      "type": "official_documentation",
+      "claims": [
+        "Windows 10 and 11",
+        "ZIP portable archive option",
+        "Save PDF workflow"
+      ],
+      "access": "direct"
+    },
+    {
+      "id": "N4",
+      "title": "NAPS2 official source repository",
+      "url": "https://github.com/cyanfish/naps2",
+      "type": "official_source",
+      "claims": [
+        "GPL 2.0 or later; individual library exceptions"
+      ],
+      "access": "direct"
+    },
+    {
+      "id": "N5",
+      "title": "NAPS2 LICENSE",
+      "url": "https://github.com/cyanfish/naps2/blob/master/LICENSE",
+      "type": "official_license",
+      "claims": [
+        "GNU General Public License text"
+      ],
+      "access": "direct"
+    },
+    {
+      "id": "N6",
+      "title": "NAPS2 Organization Use",
+      "url": "https://www.naps2.com/doc/org-use",
+      "type": "official_documentation",
+      "claims": [
+        "Local OCR language component locations",
+        "Offline deployment by copying language data"
+      ],
+      "access": "direct"
+    },
+    {
+      "id": "N7",
+      "title": "NAPS2 OCR",
+      "url": "https://www.naps2.com/doc/ocr",
+      "type": "official_documentation",
+      "claims": [
+        "OCR-language download and enable checkbox",
+        "OCR normally runs when saving",
+        "Multiple language selection",
+        "Fast and Best options",
+        "Existing-text pages left alone",
+        "Copy text from saved PDF"
+      ],
+      "access": "direct",
+      "ui_caveat": "Background OCR label on web page predates 7.4.1 rename."
+    },
+    {
+      "id": "N8",
+      "title": "NAPS2 CHANGELOG",
+      "url": "https://github.com/cyanfish/naps2/blob/master/CHANGELOG.md",
+      "type": "official_source",
+      "claims": [
+        "7.4.1 renamed Automatically run OCR after scanning to Pre-emptively run OCR after scanning"
+      ],
+      "access": "direct"
+    },
+    {
+      "id": "N9",
+      "title": "NAPS2 Command Line Usage",
+      "url": "https://www.naps2.com/doc/command-line",
+      "type": "official_documentation",
+      "claims": [
+        "--force overwrites output files and is not a force-OCR option"
+      ],
+      "access": "search_index"
+    },
+    {
+      "id": "A1",
+      "title": "Adobe free online OCR",
+      "url": "https://www.adobe.com/acrobat/online/ocr-pdf.html",
+      "type": "official_product",
+      "claims": [
+        "Advertises free OCR",
+        "Uploads file",
+        "Sign in to download result"
+      ],
+      "access": "direct"
+    },
+    {
+      "id": "A2",
+      "title": "Adobe Recognize text in scanned documents",
+      "url": "https://helpx.adobe.com/acrobat/desktop/create-documents/scan-documents-to-pdfs/recognize-text.html",
+      "type": "official_documentation",
+      "updated": "2025-09-23",
+      "claims": [
+        "Current desktop Scan & OCR steps",
+        "Review recognition accuracy"
+      ],
+      "access": "search_index"
+    },
+    {
+      "id": "G1",
+      "title": "Google Drive Convert PDF and photo files to text",
+      "url": "https://support.google.com/drive/answer/176692?hl=en-uk",
+      "type": "official_documentation",
+      "claims": [
+        "Open with Google Docs",
+        "2 MB or smaller best-results guidance",
+        "Lists tables columns and notes formatting limitations"
+      ],
+      "access": "search_index"
+    },
+    {
+      "id": "T1",
+      "title": "Tesseract Improving the quality of the output",
+      "url": "https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html",
+      "type": "official_documentation",
+      "claims": [
+        "Resolution, noise, skew and page segmentation matter"
+      ],
+      "access": "direct"
+    },
+    {
+      "id": "D1",
+      "title": "Looking for good OCR scanner software for Windows (offline, searchable PDFs)",
+      "url": "https://www.reddit.com/r/software/comments/1t8pyiv/looking_for_good_ocr_scanner_software_for_windows/",
+      "type": "first_person_demand",
+      "published_date": null,
+      "date_display_observed": "4mo ago",
+      "access": "direct",
+      "caveat": "Exact calendar date unverified. Author's plan to test NAPS2 is not a successful benchmark."
+    },
+    {
+      "id": "D2",
+      "title": "How the heck do I use NAPS2 OCR on a pdf document?",
+      "url": "https://www.reddit.com/r/software/comments/1s2lbsi/how_the_heck_do_i_use_naps2_ocr_on_a_pdf_document/",
+      "type": "first_person_demand",
+      "published_date": null,
+      "date_display_observed": "6mo ago",
+      "access": "direct",
+      "caveat": "Exact calendar date unverified. Reported reprinting success does not establish the original PDF's cause."
+    }
+  ],
+  "excluded_sources": [
+    {
+      "url": "https://naps2.net/",
+      "reason": "Not the official project domain linked by the official repository; not relied on."
+    }
+  ],
+  "fixture_test_status": "Executed through official NAPS2 console; graphical workflow source-backed only. See test-report.md.",
+  "fact_claim_limits": [
+    "No measured OCR accuracy rate",
+    "No universal handwriting promise",
+    "No verified network audit",
+    "No Adobe quota or price comparison",
+    "No claim that default NAPS2 replaces bad existing OCR"
+  ]
+}

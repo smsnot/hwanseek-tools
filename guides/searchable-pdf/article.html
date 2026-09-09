@@ -1,0 +1,85 @@
+<p>If a PDF looks readable but Find cannot locate a visible word, the page may contain a picture of text. <strong>OCR adds a text layer that a PDF reader can search and copy.</strong> For a clear, image-only scan, the free desktop app <a href="https://www.naps2.com/">NAPS2</a> provides an existing-PDF workflow; you do not need a scanner.</p>
+
+<p>First try selecting a sentence. If some text already selects or copies, use the troubleshooting section below before assuming the whole PDF needs OCR. A failed search alone does not identify the cause.</p>
+
+<h2>Quick steps</h2>
+
+<ol><li>Open NAPS2 and choose <strong>Import</strong> to load the PDF.</li><li>Open <strong>OCR</strong>, download the document&#x27;s language if needed, and enable <strong>Make PDFs searchable using OCR</strong>.</li><li>Choose <strong>Save PDF</strong> and use a new filename.</li><li>Open that saved copy in a PDF reader. Search for a visible phrase, then copy a sentence and compare it with the page.</li></ol>
+
+<p>NAPS2 normally performs recognition while saving. Importing the file or downloading a language does not by itself create the finished searchable PDF. <a href="https://www.naps2.com/doc/ocr">Official OCR instructions</a></p>
+
+<figure style="margin:28px 0"><img src="https://raw.githubusercontent.com/smsnot/hwanseek-tools/main/media/searchable-pdf/card-01.png" alt="Card 1 of 5. The words are there, but search finds nothing. A scanned PDF can contain page images, and OCR can add searchable text. The invented practice page visibly says Keep the cobalt notebook beside the sample tray. Before OCR, neither page of our clean two-page sample had extractable text. This is an instructional diagram, not a PDF viewer screenshot." width="1080" height="1350" loading="lazy" style="display:block;width:100%;max-width:640px;height:auto;margin:auto" /><figcaption style="font-size:0.9em;text-align:center;margin-top:8px">Card 1 of 5: The words are there. Search finds nothing.</figcaption></figure>
+
+<h2>Why this problem is easy to misdiagnose</h2>
+
+<p>A page can look like a document while storing its words only as image pixels. Find has no recognized words to match. Repeatedly searching the same image-only file will not add that missing text.</p>
+
+<p>The workflow can also be confusing after choosing an OCR app. In <a href="https://www.reddit.com/r/software/comments/1s2lbsi/how_the_heck_do_i_use_naps2_ocr_on_a_pdf_document/">this Reddit discussion about using NAPS2 on an existing PDF</a>, the author had installed the app and language files but still could not get the expected result. Replies discussed enabling OCR and saving another PDF. The original input was not available to us, so we do not assign its cause or treat a comment as a benchmark.</p>
+
+<figure style="margin:28px 0"><img src="https://raw.githubusercontent.com/smsnot/hwanseek-tools/main/media/searchable-pdf/card-02.png" alt="Card 2 of 5. A text layer makes the difference. After NAPS2 OCR, the clean sample contained the phrase cobalt notebook. The full extracted text of both pages matched the independent source after whitespace normalization, in both pypdf and PDFium. This is a result for the synthetic sample, not a general accuracy guarantee. The tested environment was NAPS2 8.3.2 portable on Windows, using the console with English OCR in Fast mode." width="1080" height="1350" loading="lazy" style="display:block;width:100%;max-width:640px;height:auto;margin:auto" /><figcaption style="font-size:0.9em;text-align:center;margin-top:8px">Card 2 of 5: A text layer makes the difference.</figcaption></figure>
+
+<h2>Before and after: what our practice files showed</h2>
+
+<p>The intended result is the same document pages with recognized text that a reader can use. A successful search is useful, but it does not prove that every number, name, or sentence is correct.</p>
+
+<p>Our free practice set contains invented English project notes: a clear two-page image-only PDF, a deliberately degraded one-page version, and a two-page existing-text control. In the control, page 1 has ordinary text while page 2 has a real-text header above an image body. Each page needs its own check: finding a phrase on page 1 says nothing about page 2.</p>
+
+<figure style="margin:28px 0"><img src="https://raw.githubusercontent.com/smsnot/hwanseek-tools/main/media/searchable-pdf/card-03.png" alt="Card 3 of 5. Make a searchable PDF with NAPS2. The documented app workflow is to import a PDF, open OCR setup, select or download the appropriate language, check Make PDFs searchable using OCR, and save a new PDF. Reopen the saved file to search and copy text. These graphical steps are based on official NAPS2 documentation; the measured test used the NAPS2 console, and no live graphical-app walkthrough was completed." width="1080" height="1350" loading="lazy" style="display:block;width:100%;max-width:640px;height:auto;margin:auto" /><figcaption style="font-size:0.9em;text-align:center;margin-top:8px">Card 3 of 5: Make a searchable PDF with NAPS2.</figcaption></figure>
+
+<p><strong>Test method, September 9, 2026:</strong> results were produced with NAPS2 <strong>8.3.2 for Windows</strong>, English OCR, and its official command-line interface; the button steps follow its documentation. We compared the PDF text layer with the original source text and inspected every output page. <a href="test-report.md">Detailed method</a></p>
+
+<div style="overflow-x:auto"><table style="border-collapse:collapse;width:100%;text-align:left"><thead><tr><th scope="col" style="padding:10px;border:1px solid #d6ddd6;background:#e4efeb">Sample</th><th scope="col" style="padding:10px;border:1px solid #d6ddd6;background:#e4efeb">Before OCR</th><th scope="col" style="padding:10px;border:1px solid #d6ddd6;background:#e4efeb">Verified output</th></tr></thead><tbody><tr><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">Clear scan, 2 pages</td><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">Neither page had extractable text.</td><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">Both pages&#x27; complete text matched the source after normalizing whitespace, in both parsers. Each applicable test phrase appeared on its expected page.</td></tr><tr><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">Degraded scan, 1 page</td><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">No extractable text.</td><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">All four selected phrases appeared, yet the full text contained errors: <code>Project ID</code> became <code>Project 1D</code>, among other mistakes.</td></tr><tr><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">Control, page 1</td><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">Ordinary text was already present.</td><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">Its extracted text stayed unchanged.</td></tr><tr><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">Control, page 2</td><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">Only the real-text header was extractable; the body was an image.</td><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">Only that header remained extractable. The body phrases were still absent.</td></tr></tbody></table></div>
+
+<p>This is why a search hit is only the start of verification. The degraded file passed the selected phrase checks while still producing incorrect text elsewhere.</p>
+
+<p>All original pages remained in order, with no visible clipping or missing sections in our review. OCR did not improve the blurred scan&#x27;s appearance. The saved files were not identical to the inputs; the <a href="test-report.md">detailed test report</a> records page dimensions, rendering differences, file sizes, and exact command-line steps.</p>
+
+<figure style="margin:28px 0"><img src="https://raw.githubusercontent.com/smsnot/hwanseek-tools/main/media/searchable-pdf/card-04.png" alt="Card 4 of 5. Search hits can still contain mistakes. All four selected terms on the degraded practice page were found in its extracted OCR text, but the full transcription had errors. The source says Project ID: MAPLE-0427. The output says Project 1D: MAPLE-0427, substituting the digit 1 for the capital letter I. Compare copied text with the visible page. These are exact source and output excerpts presented as a diagram, not screenshots." width="1080" height="1350" loading="lazy" style="display:block;width:100%;max-width:640px;height:auto;margin:auto" /><figcaption style="font-size:0.9em;text-align:center;margin-top:8px">Card 4 of 5: Search hits can still contain mistakes.</figcaption></figure>
+
+<h2>How to make an existing scanned PDF searchable with NAPS2</h2>
+
+<h3>1. Get the official application</h3>
+
+<p>Use the <a href="https://www.naps2.com/download">official NAPS2 download page</a>. It lists a Windows x64 portable ZIP and installers. The release checked for this guide is <strong>8.3.2</strong>. With the portable option, extract the whole ZIP into a folder before opening its launcher.</p>
+
+<p>Keep your original PDF. For your first run, use the small practice file linked below so it is easy to compare pages and spot an unexpected result.</p>
+
+<h3>2. Import the pages and choose the recognition language</h3>
+
+<p>Import your PDF and check that the page thumbnails appear in the expected order. Configure OCR as shown in the quick steps. Use the language printed in the document; the app&#x27;s interface language is a separate setting.</p>
+
+<p>The application and recognition-language files need an initial download. OCR can run locally after setup; NAPS2 also documents <a href="https://www.naps2.com/doc/org-use">offline deployment of language files</a>.</p>
+
+<h3>3. Save a separate PDF and open the result</h3>
+
+<p>Use a name such as <code>notes-searchable.pdf</code>. Wait for saving to finish, then open that exact new file rather than the original input. Check that all wanted pages were included.</p>
+
+<h3>4. Check more than one search result</h3>
+
+<p>On the clear practice file, search for <code>cobalt notebook</code> on page 1 and <code>LAMP-6209</code> on page 2. Copy a sentence and inspect the project code <code>MAPLE-0427</code> and amount <code>73.50</code>. Compare letters, digits, punctuation, page count, page order, and appearance against the original. These are selected checks, not a whole-document accuracy score.</p>
+
+<h2>NAPS2, Adobe online OCR, or Google Docs?</h2>
+
+<div style="overflow-x:auto"><table style="border-collapse:collapse;width:100%;text-align:left"><thead><tr><th scope="col" style="padding:10px;border:1px solid #d6ddd6;background:#e4efeb">Option</th><th scope="col" style="padding:10px;border:1px solid #d6ddd6;background:#e4efeb">Useful when</th><th scope="col" style="padding:10px;border:1px solid #d6ddd6;background:#e4efeb">What to account for</th></tr></thead><tbody><tr><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top"><a href="https://www.naps2.com/">NAPS2</a></td><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">You want a free desktop workflow for a searchable PDF.</td><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">Set up the app and OCR languages first. Pages containing existing text have a limitation described below.</td></tr><tr><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top"><a href="https://www.adobe.com/acrobat/online/ocr-pdf.html">Adobe online OCR</a></td><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">You prefer a browser service and are comfortable uploading the file.</td><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">Adobe advertises free OCR. Its instructions require an upload and sign-in to download the searchable result. We did not test its accuracy, quotas, or speed.</td></tr><tr><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top"><a href="https://support.google.com/drive/answer/176692?hl=en">Google Drive → Google Docs</a></td><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">You mainly want extracted text in an editable document.</td><td style="padding:10px;border:1px solid #d6ddd6;vertical-align:top">Google&#x27;s guidance recommends files of 2 MB or smaller and warns that tables, columns, lists, and notes may not transfer. That output goal differs from adding search to the scanned PDF.</td></tr></tbody></table></div>
+
+<p>These are workflow differences, not a claim that one engine recognizes text better than the others.</p>
+
+<h2>Why NAPS2 OCR may still leave text unsearchable</h2>
+
+<p><strong>The imported page already contains text.</strong> NAPS2&#x27;s documented rule skips such pages. Even a small real-text header may matter when the rest of the page is a scan. The basic sequence is therefore not a repair method for every bad existing OCR layer. <a href="https://www.naps2.com/doc/ocr">Imported-document behavior</a></p>
+
+<p><strong>The image is difficult to read.</strong> Blur, low resolution, skew, noise, and complicated layouts affect recognition. A clearer rescan can be more useful than enlarging a blurry image; enlarging it does not recover missing detail. See <a href="https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html">Tesseract&#x27;s image-quality guidance</a>.</p>
+
+<p><strong>The text exists, but it is inaccurate or poorly structured.</strong> Searchable does not mean error-free, ready for important calculations, correctly tagged for screen readers, or faithfully editable as a table. Check consequential text against the visible original. Handwriting and every language/layout combination are outside this small English practice test.</p>
+
+<p><strong>The wrong file is open.</strong> Verify the saved filename and repeat the search in the new copy. If text already copies correctly but Find still behaves unexpectedly, check the search phrase and reader behavior before processing the document again.</p>
+
+<figure style="margin:28px 0"><img src="https://raw.githubusercontent.com/smsnot/hwanseek-tools/main/media/searchable-pdf/card-05.png" alt="Card 5 of 5. Check the body of every page. In the mixed-page control, a native-text header was searchable before and after processing, while the image body received no OCR text. NAPS2 left this page with existing text unchanged. A search hit on another page does not prove that this image body was processed. The blog contains the full guide and free practice PDFs. This card is a simplified diagram of the observed control result." width="1080" height="1350" loading="lazy" style="display:block;width:100%;max-width:640px;height:auto;margin:auto" /><figcaption style="font-size:0.9em;text-align:center;margin-top:8px">Card 5 of 5: Check the body of every page.</figcaption></figure>
+
+<h2>Free practice PDFs and follow-up help</h2>
+
+<ul><li><a href="fixtures/clean-image-only.pdf">Clear two-page scan</a></li><li><a href="fixtures/degraded-image-only.pdf">Degraded one-page scan</a></li><li><a href="fixtures/existing-text-control.pdf">Existing-text and mixed-page control</a></li><li><a href="results/clean-searchable.pdf">Verified clear output, two pages</a></li><li><a href="results/degraded-searchable.pdf">Degraded output with the observed recognition errors</a></li><li><a href="fixtures/expected-transcription.json">Expected source text and search checks</a></li><li><a href="fixtures/fixture-manifest.json">Practice file manifest</a></li><li><a href="test-report.md">Page-specific test report and reproducible command-line steps</a></li><li><a href="report.json">Detailed machine-readable comparison</a></li><li><a href="https://github.com/smsnot/hwanseek-tools/tree/main/guides/searchable-pdf">Guide and supporting files on GitHub</a></li></ul>
+
+<p>If you can now copy the words but each visual line becomes an unwanted break, continue with <a href="https://hwanseek.blogspot.com/2026/09/remove-pdf-line-breaks-without-merging.html">PDF Line Break Review: keep or join breaks without merging everything</a>. That is a separate cleanup step after extracting and checking the text; it does not perform OCR.</p>
+
+<p>NAPS2 is an existing open-source project. HWANSEEK supplies this guide and its synthetic practice files; we did not create the OCR application. <a href="https://github.com/cyanfish/naps2">NAPS2 source and license</a></p>
