@@ -1,0 +1,9 @@
+1. Card 1 of 5. 20 ZIPs, same folders again? A Reddit user reported receiving 20 Google Takeout ZIP files with matching folder names and different contents. Three conceptual archive folders illustrate the problem. Shared folder paths can combine when individual file paths do not conflict.
+
+2. Card 2 of 5. Same folder, different files. Separate extraction creates part-01 and part-02 folders with their own Takeout trees. A shared output combines them under merged slash Takeout while keeping internal paths. The original ZIP archives remain intact.
+
+3. Card 3 of 5. One destination, keep the paths. In 7-Zip select the ZIPs and choose Extract files. Use one empty shared output folder, Full pathnames, and Ask before overwrite. These are documented graphical settings; the completed extraction test used 7-Zip command-line edition. This is a diagram, not a screenshot.
+
+4. Card 4 of 5. Three ZIPs, nine matching files. In a synthetic test using 7-Zip 24.08 command-line edition on Windows 10, all nine expected file paths and SHA-256 hashes matched in one output tree. Leaving out the third ZIP still reported extraction success but produced only six files. No speed claim is made.
+
+5. Card 5 of 5. A file conflict? Stop and compare. Two status.txt files at the same complete path can contain version A and version B. Keep the original ZIPs and review conflicts in separate folders. Missing archives, true .001 split volumes, disk space, and Google Photos metadata require separate checks. The free practice archives and guide are linked from the profile.
