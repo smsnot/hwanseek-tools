@@ -1,5 +1,9 @@
 # HWANSEEK — Small browser tools
 
+## Practical guides
+
+- [Keep CSV identifiers intact in Google Sheets](guides/google-sheets-csv/): free practice files, a tested import setting, and numeric amount conversion while identifiers remain text.
+
 ## Image Fit Review
 
 [Open the tool](https://hwanseek.shinhwa7848.chatgpt.site/image-fit-review). Fit up to 30 still JPG, PNG, or WebP images into one exact canvas size, preserving the complete image and aspect ratio. Choose white or transparent padding, inspect each preview, and download distinct PNG copies in a ZIP. Enlargement is off by default. Canvas sides are limited to 4,096 pixels and the canvas to 12 million pixels; generated output is limited to 100 MB. Padding is not AI background extension; PNG copies may be larger than the source.
