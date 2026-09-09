@@ -1,5 +1,19 @@
 # HWANSEEK — Small browser tools
 
+## Image Fit Review
+
+[Open the tool](https://hwanseek.shinhwa7848.chatgpt.site/image-fit-review). Fit up to 30 still JPG, PNG, or WebP images into one exact canvas size, preserving the complete image and aspect ratio. Choose white or transparent padding, inspect each preview, and download distinct PNG copies in a ZIP. Enlargement is off by default. Canvas sides are limited to 4,096 pixels and the canvas to 12 million pixels; generated output is limited to 100 MB. Padding is not AI background extension; PNG copies may be larger than the source.
+
+## Image Size Check
+
+[Open the tool](https://hwanseek.shinhwa7848.chatgpt.site/image-size-check). Create a white-background JPG candidate below an entered maximum file size and width. The bounded search tries quality settings and proportional resizing, measures the actual encoded bytes, and explicitly reports failure when no passing candidate is found. Compare at actual pixels before downloading. One KB means 1,000 bytes. It does not validate a receiving site's content, identity, minimum-resolution, or other upload rules; the search does not guarantee the best possible compression.
+
+## Photo Sheet
+
+[Open the tool](https://hwanseek.shinhwa7848.chatgpt.site/photo-sheet). Arrange up to 60 photos, edit display filenames without renaming originals, and create a multipage A4 or US Letter PDF with two to four columns. Filenames wrap and remain real selectable text. Smaller JPG previews are flattened on white; this is an overview, not a color proof or full-resolution archive. Many Latin, Korean, Chinese, and Japanese characters are supported. Unsupported characters require editing the display name. Unicode labels embed the bundled font and can increase PDF size.
+
+All three image tools process selected files in the browser, with no image-content uploads, AI calls, or browser-storage persistence. Ordinary page and font requests still occur. Shared input limits are 20 MB per file, 12 million pixels per image, 12,000 pixels per source side, and 100 MB total. Animated images and RAW/HEIC are outside scope. Metadata and color profiles are not preserved. See [image-tools-comparison.md](image-tools-comparison.md) for actual tests and qualified competitor observations.
+
 ## Screenshot Cut Review
 
 [Open the tool](https://hwanseek.shinhwa7848.chatgpt.site/screenshot-cut-review). Choose a PNG, JPG, or still WebP and mark several full-width horizontal bands. Review the original and result, edit or remove individual cuts, and download a PNG with visible omission markers. Overlapping or touching bands merge. Original pixel width and retained pixels are preserved in the full-size PNG; the preview is scaled. File size may increase.
