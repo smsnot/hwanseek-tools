@@ -1,0 +1,108 @@
+{
+  "method": "New SVG vector and text illustrations rendered to PNG with sharp. Not screenshots of an application.",
+  "style": {
+    "width": 1080,
+    "height": 1350,
+    "ratio": "4:5",
+    "font": "Arial / Helvetica",
+    "palette": {
+      "cream": "#FAF7EF",
+      "navy": "#07152E",
+      "teal": "#187C79",
+      "light": "#E4EFEB",
+      "line": "#D6DDD6",
+      "white": "#FFFFFF",
+      "muted": "#52636B",
+      "amber": "#956329",
+      "sand": "#F3E9D6"
+    }
+  },
+  "topic": "Searchable PDF with NAPS2",
+  "aiDisclosure": "AI-assisted instructional diagrams; not application screenshots.",
+  "testedEnvironment": "NAPS2 8.3.2 portable, Windows, official console, English OCR, default Fast mode.",
+  "instructionScope": "Graphical app steps are sourced from official documentation, not a live GUI test.",
+  "validationScope": "Independent pypdf and PDFium checks against a pre-OCR source. Clean two-page text matched after whitespace normalization. Degraded selected-term checks passed but full text had errors. The mixed-page image body remained without OCR text. No general accuracy, lossless, or exact geometric preservation claim.",
+  "sources": [
+    {
+      "title": "NAPS2 OCR documentation",
+      "url": "https://www.naps2.com/doc/ocr"
+    }
+  ],
+  "publicResults": [
+    "https://raw.githubusercontent.com/smsnot/hwanseek-tools/main/guides/searchable-pdf/results/clean-searchable.pdf",
+    "https://raw.githubusercontent.com/smsnot/hwanseek-tools/main/guides/searchable-pdf/results/degraded-searchable.pdf"
+  ],
+  "cards": [
+    {
+      "number": 1,
+      "filename": "card-01.png",
+      "width": 1080,
+      "height": 1350,
+      "alt": "Card 1 of 5. The words are there, but search finds nothing. A scanned PDF can contain page images, and OCR can add searchable text. The invented practice page visibly says Keep the cobalt notebook beside the sample tray. Before OCR, neither page of our clean two-page sample had extractable text. This is an instructional diagram, not a PDF viewer screenshot.",
+      "headline": "The words are there. Search finds nothing.",
+      "sourceSvg": "card-01.svg",
+      "status": "Visually reviewed at native dimensions on 2026-09-09",
+      "sha256": "dc313ce178eaa5b066796ab79b5ad642f0af630809f3c19a64dffa61b263b2f9",
+      "bytes": 119077,
+      "publicUrl": "https://raw.githubusercontent.com/smsnot/hwanseek-tools/main/media/searchable-pdf/card-01.png"
+    },
+    {
+      "number": 2,
+      "filename": "card-02.png",
+      "width": 1080,
+      "height": 1350,
+      "alt": "Card 2 of 5. A text layer makes the difference. After NAPS2 OCR, the clean sample contained the phrase cobalt notebook. The full extracted text of both pages matched the independent source after whitespace normalization, in both pypdf and PDFium. This is a result for the synthetic sample, not a general accuracy guarantee. The tested environment was NAPS2 8.3.2 portable on Windows, using the console with English OCR in Fast mode.",
+      "headline": "A text layer makes the difference.",
+      "sourceSvg": "card-02.svg",
+      "status": "Visually reviewed at native dimensions on 2026-09-09",
+      "sha256": "6b933a59666720dbdd5113bfaf69daa5bfe52cf9f40c3bdb51f8e8373f055445",
+      "bytes": 125414,
+      "publicUrl": "https://raw.githubusercontent.com/smsnot/hwanseek-tools/main/media/searchable-pdf/card-02.png"
+    },
+    {
+      "number": 3,
+      "filename": "card-03.png",
+      "width": 1080,
+      "height": 1350,
+      "alt": "Card 3 of 5. Make a searchable PDF with NAPS2. The documented app workflow is to import a PDF, open OCR setup, select or download the appropriate language, check Make PDFs searchable using OCR, and save a new PDF. Reopen the saved file to search and copy text. These graphical steps are based on official NAPS2 documentation; the measured test used the NAPS2 console, and no live graphical-app walkthrough was completed.",
+      "headline": "Make a searchable PDF with NAPS2.",
+      "sourceSvg": "card-03.svg",
+      "status": "Visually reviewed at native dimensions on 2026-09-09",
+      "sha256": "379c5785bcffb779952c328ff94c6b43d48c9b188cea3aedc982845863f6b68b",
+      "bytes": 132817,
+      "publicUrl": "https://raw.githubusercontent.com/smsnot/hwanseek-tools/main/media/searchable-pdf/card-03.png"
+    },
+    {
+      "number": 4,
+      "filename": "card-04.png",
+      "width": 1080,
+      "height": 1350,
+      "alt": "Card 4 of 5. Search hits can still contain mistakes. All four selected terms on the degraded practice page were found in its extracted OCR text, but the full transcription had errors. The source says Project ID: MAPLE-0427. The output says Project 1D: MAPLE-0427, substituting the digit 1 for the capital letter I. Compare copied text with the visible page. These are exact source and output excerpts presented as a diagram, not screenshots.",
+      "headline": "Search hits can still contain mistakes.",
+      "sourceSvg": "card-04.svg",
+      "status": "Visually reviewed at native dimensions on 2026-09-09",
+      "sha256": "78042c042f0a353b70889502c94df15d8fbac3c3847d998a82488172c78b4077",
+      "bytes": 115810,
+      "publicUrl": "https://raw.githubusercontent.com/smsnot/hwanseek-tools/main/media/searchable-pdf/card-04.png"
+    },
+    {
+      "number": 5,
+      "filename": "card-05.png",
+      "width": 1080,
+      "height": 1350,
+      "alt": "Card 5 of 5. Check the body of every page. In the mixed-page control, a native-text header was searchable before and after processing, while the image body received no OCR text. NAPS2 left this page with existing text unchanged. A search hit on another page does not prove that this image body was processed. The blog contains the full guide and free practice PDFs. This card is a simplified diagram of the observed control result.",
+      "headline": "Check the body of every page.",
+      "sourceSvg": "card-05.svg",
+      "status": "Visually reviewed at native dimensions on 2026-09-09",
+      "sha256": "c5d229e933d0c35d27d24a0daf49ea3bc254c389e30190f53fc61b85c00e5194",
+      "bytes": 124474,
+      "publicUrl": "https://raw.githubusercontent.com/smsnot/hwanseek-tools/main/media/searchable-pdf/card-05.png"
+    }
+  ],
+  "visualReview": {
+    "date": "2026-09-09",
+    "method": "Five-card contact sheet and every 1080-by-1350 card opened and inspected individually.",
+    "result": "Headlines, body copy, diagrams, footnotes and numbering fit within the established margins. No text clipping, overlap or missing glyphs observed.",
+    "factualChecks": "Clean match claims checked against both parser results. Degraded source and output excerpts match the actual evidence. Existing-text control page 2 remains header-only. Documented GUI steps are explicitly separated from console execution."
+  }
+}
