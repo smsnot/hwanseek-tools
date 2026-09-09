@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-09",
+  "archive": {
+    "name": "hwanseek-file-list-pick-practice.zip",
+    "bytes": 80931,
+    "sha256": "e99ae56bdca770b590608fa1e90238e46537e14f74186aec1706c187776f330c"
+  },
+  "fixtureSourceFiles": 16,
+  "fixtureSourceBytes": 92907,
+  "allFixtureSourceHashesUnchanged": true,
+  "successfulExtraction": {
+    "application": "7-Zip",
+    "version": "24.08 x64",
+    "os": "Windows",
+    "command": "& 'C:\\Program Files\\7-Zip\\7z.exe' x './guides/file-list-pick/hwanseek-file-list-pick-practice.zip' '-oguides/file-list-pick' -y"
+  },
+  "automatedTests": {
+    "runtime": "Node 24.19.0",
+    "command": "node --experimental-strip-types --test tests/file-list-pick.test.mjs",
+    "passed": 6,
+    "failed": 0
+  },
+  "otherExtractionObserved": {
+    "application": "PowerShell Expand-Archive",
+    "result": "Main matching and export tests passed, but extraction removed the leading space in Whitespace/ leading-space.txt; the edge-case test failed."
+  },
+  "testScope": "Core function tests after extraction. Browser tests are documented separately in the article."
+}

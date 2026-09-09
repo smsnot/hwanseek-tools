@@ -1,0 +1,102 @@
+{
+  "files": [
+    {
+      "relativePath": "Archive/v2/notes.final.v2.txt",
+      "name": "notes.final.v2.txt",
+      "bytes": 62,
+      "sha256": "1b091320695b3342150be5065055a42b078766db926ee85016cd80a12c7ca716"
+    },
+    {
+      "relativePath": "Camera A/IMG_0101.JPG",
+      "name": "IMG_0101.JPG",
+      "bytes": 15535,
+      "sha256": "9f1ebd5bc532a9de7c7c28a228d5fed0595bc8e7950eb1f0decb1f63f7e59cbe"
+    },
+    {
+      "relativePath": "Camera A/IMG_0102.JPG",
+      "name": "IMG_0102.JPG",
+      "bytes": 15304,
+      "sha256": "f3cff08251b21f69edd340c85ac4ddb7434d70cb2b4fadbd0ec9b6779adc6f21"
+    },
+    {
+      "relativePath": "Camera B/IMG_0101.JPG",
+      "name": "IMG_0101.JPG",
+      "bytes": 15360,
+      "sha256": "f428f4346f0d8bce9d52e68e32d1bec142ef16ab89809b89d687d7dec21d10d2"
+    },
+    {
+      "relativePath": "Camera B/img_0102.jpg",
+      "name": "img_0102.jpg",
+      "bytes": 14641,
+      "sha256": "49478c7fcb95c9c1c60355ac26b47014e803ab4bb4d71defdbcfdff112a658b4"
+    },
+    {
+      "relativePath": "Client picks/Beach walk 01.jpg",
+      "name": "Beach walk 01.jpg",
+      "bytes": 15129,
+      "sha256": "607dd106d257d2650fb0b097801c8f9e03ea6038ea0535011d03d2cc875d54df"
+    },
+    {
+      "relativePath": "Client picks/최종 선택 01.jpg",
+      "name": "최종 선택 01.jpg",
+      "bytes": 14519,
+      "sha256": "d57742b42fe4738f8ed53fa9acc1ff9265edc70bf358cc3ff1446f8180200797"
+    },
+    {
+      "relativePath": "Documents/[draft] & final.txt",
+      "name": "[draft] & final.txt",
+      "bytes": 79,
+      "sha256": "bf3781528e777c27f83e52f79a6d8a572c1023526585f85ef233ec42bb9c5bc9"
+    },
+    {
+      "relativePath": "Documents/notes, final.txt",
+      "name": "notes, final.txt",
+      "bytes": 65,
+      "sha256": "85100365480987b3b8114c2995286da385159c287cbcff3b93b47604ec59a813"
+    },
+    {
+      "relativePath": "Documents/Project brief.pdf",
+      "name": "Project brief.pdf",
+      "bytes": 1901,
+      "sha256": "03b9c2fcba4f25d4347f493aea2778b3a6cb45bba22ba0b56bb52c5534e66831"
+    },
+    {
+      "relativePath": "Documents/README.TXT",
+      "name": "README.TXT",
+      "bytes": 57,
+      "sha256": "b98ff4fd830621950cd79862f911c44837e97ad6cd23a36607a0a762d3f8305c"
+    },
+    {
+      "relativePath": "Empty/empty.txt",
+      "name": "empty.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "Other/unrequested.txt",
+      "name": "unrequested.txt",
+      "bytes": 72,
+      "sha256": "9e894f7c2df590aea7b3e2210051c4d415251efef48edbb40fbb327831392ea2"
+    },
+    {
+      "relativePath": "Unicode/NFC/한글.txt",
+      "name": "한글.txt",
+      "bytes": 57,
+      "sha256": "db1c807196d8c354bc1a24740bcc645c07ebeb35d8c941c3ea2e4e06db159597"
+    },
+    {
+      "relativePath": "Unicode/NFD/한글.txt",
+      "name": "한글.txt",
+      "bytes": 59,
+      "sha256": "7dec643c0c57659e197761be866944ae54be2a29047bc98785ff6b89ecd09478"
+    },
+    {
+      "relativePath": "Whitespace/ leading-space.txt",
+      "name": " leading-space.txt",
+      "bytes": 67,
+      "sha256": "8779a6a94ce5ccf1f0d7eb91e066e9601d3e1c7107a6353497ac9d3c0cbd8aa4"
+    }
+  ],
+  "totalFiles": 16,
+  "totalBytes": 92907
+}

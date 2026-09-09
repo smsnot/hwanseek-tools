@@ -1,0 +1,193 @@
+{
+  "description": "Optional parser/Unicode checks; invalid-input UX labels are implementation-defined. Never silently broaden a match.",
+  "requests": [
+    {
+      "line": 1,
+      "name": "한글.txt",
+      "codePoints": [
+        "U+D55C",
+        "U+AE00",
+        "U+002E",
+        "U+0074",
+        "U+0078",
+        "U+0074"
+      ],
+      "exactCandidates": [
+        "Unicode/NFC/한글.txt"
+      ]
+    },
+    {
+      "line": 2,
+      "name": "한글.txt",
+      "codePoints": [
+        "U+1112",
+        "U+1161",
+        "U+11AB",
+        "U+1100",
+        "U+1173",
+        "U+11AF",
+        "U+002E",
+        "U+0074",
+        "U+0078",
+        "U+0074"
+      ],
+      "exactCandidates": [
+        "Unicode/NFD/한글.txt"
+      ]
+    },
+    {
+      "line": 3,
+      "name": " leading-space.txt",
+      "codePoints": [
+        "U+0020",
+        "U+006C",
+        "U+0065",
+        "U+0061",
+        "U+0064",
+        "U+0069",
+        "U+006E",
+        "U+0067",
+        "U+002D",
+        "U+0073",
+        "U+0070",
+        "U+0061",
+        "U+0063",
+        "U+0065",
+        "U+002E",
+        "U+0074",
+        "U+0078",
+        "U+0074"
+      ],
+      "exactCandidates": [
+        "Whitespace/ leading-space.txt"
+      ]
+    },
+    {
+      "line": 4,
+      "name": "[draft] & final.txt",
+      "codePoints": [
+        "U+005B",
+        "U+0064",
+        "U+0072",
+        "U+0061",
+        "U+0066",
+        "U+0074",
+        "U+005D",
+        "U+0020",
+        "U+0026",
+        "U+0020",
+        "U+0066",
+        "U+0069",
+        "U+006E",
+        "U+0061",
+        "U+006C",
+        "U+002E",
+        "U+0074",
+        "U+0078",
+        "U+0074"
+      ],
+      "exactCandidates": [
+        "Documents/[draft] & final.txt"
+      ]
+    },
+    {
+      "line": 5,
+      "name": "Beach walk 01.JPG",
+      "codePoints": [
+        "U+0042",
+        "U+0065",
+        "U+0061",
+        "U+0063",
+        "U+0068",
+        "U+0020",
+        "U+0077",
+        "U+0061",
+        "U+006C",
+        "U+006B",
+        "U+0020",
+        "U+0030",
+        "U+0031",
+        "U+002E",
+        "U+004A",
+        "U+0050",
+        "U+0047"
+      ],
+      "exactCandidates": []
+    },
+    {
+      "line": 6,
+      "name": "\"Beach walk 01.jpg\"",
+      "codePoints": [
+        "U+0022",
+        "U+0042",
+        "U+0065",
+        "U+0061",
+        "U+0063",
+        "U+0068",
+        "U+0020",
+        "U+0077",
+        "U+0061",
+        "U+006C",
+        "U+006B",
+        "U+0020",
+        "U+0030",
+        "U+0031",
+        "U+002E",
+        "U+006A",
+        "U+0070",
+        "U+0067",
+        "U+0022"
+      ],
+      "exactCandidates": []
+    },
+    {
+      "line": 7,
+      "name": "Client picks/Beach walk 01.jpg",
+      "codePoints": [
+        "U+0043",
+        "U+006C",
+        "U+0069",
+        "U+0065",
+        "U+006E",
+        "U+0074",
+        "U+0020",
+        "U+0070",
+        "U+0069",
+        "U+0063",
+        "U+006B",
+        "U+0073",
+        "U+002F",
+        "U+0042",
+        "U+0065",
+        "U+0061",
+        "U+0063",
+        "U+0068",
+        "U+0020",
+        "U+0077",
+        "U+0061",
+        "U+006C",
+        "U+006B",
+        "U+0020",
+        "U+0030",
+        "U+0031",
+        "U+002E",
+        "U+006A",
+        "U+0070",
+        "U+0067"
+      ],
+      "exactCandidates": []
+    },
+    {
+      "line": 8,
+      "name": "*.jpg",
+      "codePoints": [
+        "U+002A",
+        "U+002E",
+        "U+006A",
+        "U+0070",
+        "U+0067"
+      ],
+      "exactCandidates": []
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+한글.txt
+한글.txt
+ leading-space.txt
+[draft] & final.txt
+Beach walk 01.JPG
+"Beach walk 01.jpg"
+Client picks/Beach walk 01.jpg
+*.jpg
+

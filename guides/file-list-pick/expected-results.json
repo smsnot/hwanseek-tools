@@ -1,0 +1,206 @@
+{
+  "description": "Independent fixture oracle, not an application-test result.",
+  "sourceFolder": "file-list-pick-practice",
+  "matching": "Exact case-sensitive basename. Preserve spaces, punctuation, extensions, and Unicode code points. One name per nonblank line.",
+  "counts": {
+    "requestLines": 14,
+    "uniqueRequestedNames": 13,
+    "duplicateRequestLines": 1,
+    "foundUniqueNames": 9,
+    "missingUniqueNames": 3,
+    "ambiguousUniqueNames": 1,
+    "sourcePayloadFilesAfterChoice": 10
+  },
+  "requests": [
+    {
+      "line": 1,
+      "name": "IMG_0101.JPG",
+      "matchStatus": "ambiguous",
+      "candidates": [
+        "Camera A/IMG_0101.JPG",
+        "Camera B/IMG_0101.JPG"
+      ],
+      "duplicateOfLine": null
+    },
+    {
+      "line": 2,
+      "name": "Beach walk 01.jpg",
+      "matchStatus": "found",
+      "candidates": [
+        "Client picks/Beach walk 01.jpg"
+      ],
+      "duplicateOfLine": null
+    },
+    {
+      "line": 3,
+      "name": "최종 선택 01.jpg",
+      "matchStatus": "found",
+      "candidates": [
+        "Client picks/최종 선택 01.jpg"
+      ],
+      "duplicateOfLine": null
+    },
+    {
+      "line": 4,
+      "name": "Project brief.pdf",
+      "matchStatus": "found",
+      "candidates": [
+        "Documents/Project brief.pdf"
+      ],
+      "duplicateOfLine": null
+    },
+    {
+      "line": 5,
+      "name": "notes, final.txt",
+      "matchStatus": "found",
+      "candidates": [
+        "Documents/notes, final.txt"
+      ],
+      "duplicateOfLine": null
+    },
+    {
+      "line": 6,
+      "name": "IMG_0102.JPG",
+      "matchStatus": "found",
+      "candidates": [
+        "Camera A/IMG_0102.JPG"
+      ],
+      "duplicateOfLine": null
+    },
+    {
+      "line": 7,
+      "name": "img_0102.jpg",
+      "matchStatus": "found",
+      "candidates": [
+        "Camera B/img_0102.jpg"
+      ],
+      "duplicateOfLine": null
+    },
+    {
+      "line": 8,
+      "name": "missing-shot.jpg",
+      "matchStatus": "missing",
+      "candidates": [],
+      "duplicateOfLine": null
+    },
+    {
+      "line": 9,
+      "name": "Project brief.pdf",
+      "matchStatus": "found",
+      "candidates": [
+        "Documents/Project brief.pdf"
+      ],
+      "duplicateOfLine": 4
+    },
+    {
+      "line": 10,
+      "name": "README.txt",
+      "matchStatus": "missing",
+      "candidates": [],
+      "duplicateOfLine": null
+    },
+    {
+      "line": 11,
+      "name": "README.TXT",
+      "matchStatus": "found",
+      "candidates": [
+        "Documents/README.TXT"
+      ],
+      "duplicateOfLine": null
+    },
+    {
+      "line": 12,
+      "name": "notes.final.v2.txt",
+      "matchStatus": "found",
+      "candidates": [
+        "Archive/v2/notes.final.v2.txt"
+      ],
+      "duplicateOfLine": null
+    },
+    {
+      "line": 13,
+      "name": "empty.txt",
+      "matchStatus": "found",
+      "candidates": [
+        "Empty/empty.txt"
+      ],
+      "duplicateOfLine": null
+    },
+    {
+      "line": 14,
+      "name": "IMG_0102",
+      "matchStatus": "missing",
+      "candidates": [],
+      "duplicateOfLine": null
+    }
+  ],
+  "explicitAmbiguityChoice": {
+    "IMG_0101.JPG": [
+      "Camera B/IMG_0101.JPG"
+    ]
+  },
+  "expectedSourcePayload": [
+    {
+      "relativePath": "Archive/v2/notes.final.v2.txt",
+      "name": "notes.final.v2.txt",
+      "bytes": 62,
+      "sha256": "1b091320695b3342150be5065055a42b078766db926ee85016cd80a12c7ca716"
+    },
+    {
+      "relativePath": "Camera A/IMG_0102.JPG",
+      "name": "IMG_0102.JPG",
+      "bytes": 15304,
+      "sha256": "f3cff08251b21f69edd340c85ac4ddb7434d70cb2b4fadbd0ec9b6779adc6f21"
+    },
+    {
+      "relativePath": "Camera B/IMG_0101.JPG",
+      "name": "IMG_0101.JPG",
+      "bytes": 15360,
+      "sha256": "f428f4346f0d8bce9d52e68e32d1bec142ef16ab89809b89d687d7dec21d10d2"
+    },
+    {
+      "relativePath": "Camera B/img_0102.jpg",
+      "name": "img_0102.jpg",
+      "bytes": 14641,
+      "sha256": "49478c7fcb95c9c1c60355ac26b47014e803ab4bb4d71defdbcfdff112a658b4"
+    },
+    {
+      "relativePath": "Client picks/Beach walk 01.jpg",
+      "name": "Beach walk 01.jpg",
+      "bytes": 15129,
+      "sha256": "607dd106d257d2650fb0b097801c8f9e03ea6038ea0535011d03d2cc875d54df"
+    },
+    {
+      "relativePath": "Client picks/최종 선택 01.jpg",
+      "name": "최종 선택 01.jpg",
+      "bytes": 14519,
+      "sha256": "d57742b42fe4738f8ed53fa9acc1ff9265edc70bf358cc3ff1446f8180200797"
+    },
+    {
+      "relativePath": "Documents/Project brief.pdf",
+      "name": "Project brief.pdf",
+      "bytes": 1901,
+      "sha256": "03b9c2fcba4f25d4347f493aea2778b3a6cb45bba22ba0b56bb52c5534e66831"
+    },
+    {
+      "relativePath": "Documents/README.TXT",
+      "name": "README.TXT",
+      "bytes": 57,
+      "sha256": "b98ff4fd830621950cd79862f911c44837e97ad6cd23a36607a0a762d3f8305c"
+    },
+    {
+      "relativePath": "Documents/notes, final.txt",
+      "name": "notes, final.txt",
+      "bytes": 65,
+      "sha256": "85100365480987b3b8114c2995286da385159c287cbcff3b93b47604ec59a813"
+    },
+    {
+      "relativePath": "Empty/empty.txt",
+      "name": "empty.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "expectedSourcePayloadBytes": 77038,
+  "reportNotes": "Generated report files and optional ZIP directory entries are additional archive entries, not source payload files. Exact report schema and ZIP root convention are implementation-defined and must be checked separately."
+}

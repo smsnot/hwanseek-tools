@@ -1,0 +1,110 @@
+{
+  "scope": "Desktop Edge built-in example: actual download reopened and verified; IAB selected actual16-file practice folder and generated10-file ZIP in browser; IAB download was not obtained. Edge native folder chooser automation did not complete.",
+  "example": {
+    "payloadFiles": 3,
+    "payloadBytes": 113,
+    "zipEntries": 4,
+    "pathsAndBytes": [
+      {
+        "path": "files/Team B/notes.txt",
+        "match": true
+      },
+      {
+        "path": "files/Documents/Project brief.txt",
+        "match": true
+      },
+      {
+        "path": "files/Documents/선택.txt",
+        "match": true
+      }
+    ],
+    "report": {
+      "tool": "HWANSEEK File List Pick",
+      "createdAt": "2026-09-09T11:09:20.442Z",
+      "folder": "Example files (synthetic)",
+      "matching": "Exact full filename; case, spaces and Unicode spelling are preserved. Empty lines and one initial BOM are ignored.",
+      "indexedFiles": 4,
+      "requestedLines": 5,
+      "uniqueNames": 4,
+      "selectedFiles": [
+        {
+          "path": "files/Team B/notes.txt",
+          "size": 27
+        },
+        {
+          "path": "files/Documents/Project brief.txt",
+          "size": 49
+        },
+        {
+          "path": "files/Documents/선택.txt",
+          "size": 37
+        }
+      ],
+      "requests": [
+        {
+          "name": "notes.txt",
+          "lines": [
+            1
+          ],
+          "status": "selected",
+          "candidates": [
+            "Team A/notes.txt",
+            "Team B/notes.txt"
+          ],
+          "selected": [
+            "Team B/notes.txt"
+          ]
+        },
+        {
+          "name": "Project brief.txt",
+          "lines": [
+            2,
+            5
+          ],
+          "status": "selected",
+          "candidates": [
+            "Documents/Project brief.txt"
+          ],
+          "selected": [
+            "Documents/Project brief.txt"
+          ]
+        },
+        {
+          "name": "선택.txt",
+          "lines": [
+            3
+          ],
+          "status": "selected",
+          "candidates": [
+            "Documents/선택.txt"
+          ],
+          "selected": [
+            "Documents/선택.txt"
+          ]
+        },
+        {
+          "name": "missing.txt",
+          "lines": [
+            4
+          ],
+          "status": "missing",
+          "candidates": [],
+          "selected": []
+        }
+      ],
+      "scope": "Only files in the chosen folder were checked. Empty folders, permissions and filesystem metadata are not preserved. File bytes are copied without conversion."
+    }
+  },
+  "iab": {
+    "folderFiles": 16,
+    "uniqueNames": 13,
+    "missing": 3,
+    "ambiguous": 1,
+    "duplicateRequestLines": 1,
+    "explicitChoice": "Camera B/IMG_0101.JPG",
+    "selectedFiles": 10,
+    "partialAcknowledgementRequired": true,
+    "zipReady": true
+  },
+  "sourceAudit": "No application fetch/XHR/WebSocket, external API or browser storage in new source modules. Normal page hosting requests occur."
+}

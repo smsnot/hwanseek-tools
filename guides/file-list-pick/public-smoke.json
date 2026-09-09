@@ -1,0 +1,19 @@
+{
+  "choice": "Team B/notes.txt",
+  "repeatedLines": 1,
+  "requestLines": 5,
+  "url": "https://hwanseek.shinhwa7848.chatgpt.site/file-list-pick",
+  "distinctNames": 4,
+  "missingNames": 1,
+  "result": "ZIP ready: 3 files and report.json. Download and check the report.",
+  "scope": "Public page UI smoke; actual downloaded archive verification is documented separately in browser-verification.json.",
+  "scenario": "Built-in synthetic example on public deployment",
+  "downloadButtonEnabled": true,
+  "ambiguousNames": 1,
+  "deploymentId": "appgdep_6aa13fee24b88191b6f55105fe08787b",
+  "inputFiles": 4,
+  "checkedAt": "2026-09-09T20:27:50.0456419+09:00",
+  "selectedFiles": 3,
+  "browser": "Microsoft Edge",
+  "selectedBytes": 113
+}
