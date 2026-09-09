@@ -1,0 +1,76 @@
+{
+  "created": "2026-09-09",
+  "files": [
+    {
+      "file": "clean-image-only.pdf",
+      "pages": 2,
+      "bytes": 382594,
+      "sha256": "24bfbe359126409e12dc6d3394ec40baf457b47f1d1b1e6db814586024b07951",
+      "initialExtractedCharactersByPage": [
+        0,
+        0
+      ],
+      "imageCountByPage": [
+        1,
+        1
+      ]
+    },
+    {
+      "file": "degraded-image-only.pdf",
+      "pages": 1,
+      "bytes": 56801,
+      "sha256": "9a5c600b7d76e8f0ebed8c25332b5e2afe7de0ced2133b177604a5bd5b48b4dc",
+      "initialExtractedCharactersByPage": [
+        0
+      ],
+      "imageCountByPage": [
+        1
+      ]
+    },
+    {
+      "file": "existing-text-control.pdf",
+      "pages": 2,
+      "bytes": 263563,
+      "sha256": "bd93aa55ced071c855a37bf76cf4ff1063ff56565e8ce998a057bfccb3fe762a",
+      "initialExtractedCharactersByPage": [
+        431,
+        43
+      ],
+      "imageCountByPage": [
+        0,
+        1
+      ]
+    }
+  ],
+  "cleanRaster": {
+    "pixels": [
+      2550,
+      3300
+    ],
+    "effectiveDpi": 300
+  },
+  "degradedRaster": {
+    "pixels": [
+      612,
+      792
+    ],
+    "effectiveDpi": 72,
+    "grayscaleRangeBeforeJpeg": [
+      110,
+      250
+    ],
+    "gaussianBlurRadiusPx": 0.65,
+    "rotationDegrees": 1.1,
+    "jpegQuality": 22
+  },
+  "comparison": "Degraded and existing-text controls share clean page 1 source text. Control page 2 adds a native-text header above the image. The challenge is intentionally lower quality, not representative of every scan.",
+  "ocrRun": false,
+  "visualReview": {
+    "date": "2026-09-09",
+    "method": "All five input pages rendered with Poppler at 120 DPI and inspected individually.",
+    "clean": "Both pages have clear type, intact margins and no clipped or overlapping text.",
+    "degraded": "Deliberate blur, lower contrast, compression loss and slight rotation are visible. All source lines remain on the page.",
+    "control": "Page 1 has native text. Page 2 has a separate visible native-text header above an intact page image. No text overlaps were observed.",
+    "pdfInputsFrozen": true
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "purpose": "Independent expected transcription, defined before any OCR run. This is source content, not an OCR accuracy claim.",
+  "language": "English",
+  "pageSizePoints": [
+    612,
+    792
+  ],
+  "contentIsSynthetic": true,
+  "files": [
+    {
+      "file": "clean-image-only.pdf",
+      "pages": 2,
+      "expectedInitialExtractableText": "",
+      "expectedTranscriptionByPage": [
+        "HWANSEEK\nMAPLE project notes\nSynthetic practice page 1 of 2\nProject ID: MAPLE-0427\nPurpose: prepare a small desk organizer.\nKeep the cobalt notebook beside the sample tray.\nInventory\nTray count: 18\nLabel set: BATCH-0018\nReference amount: 73.50\nReview note: The blue insert stays in Box 4.\nNext step\nCheck the printed list before filing the pages.\nThese are invented notes, not a real order.\nHWANSEEK - English OCR practice - Page 1\n",
+        "HWANSEEK\nMAPLE review checklist\nSynthetic practice page 2 of 2\nProject ID: MAPLE-0427\nKeep the amber folder on the lower shelf.\nLeave enough space for the spare dividers.\nReview checklist\nReference code: LAMP-6209\nCheck count: 24\nReview date: 2026-08-14\nStatus: ready for a second review.\nBefore filing\nCompare names, numbers, and punctuation.\nThese are invented notes, not a real order.\nHWANSEEK - English OCR practice - Page 2\n"
+      ]
+    },
+    {
+      "file": "degraded-image-only.pdf",
+      "pages": 1,
+      "expectedInitialExtractableText": "",
+      "expectedTranscriptionByPage": [
+        "HWANSEEK\nMAPLE project notes\nSynthetic practice page 1 of 2\nProject ID: MAPLE-0427\nPurpose: prepare a small desk organizer.\nKeep the cobalt notebook beside the sample tray.\nInventory\nTray count: 18\nLabel set: BATCH-0018\nReference amount: 73.50\nReview note: The blue insert stays in Box 4.\nNext step\nCheck the printed list before filing the pages.\nThese are invented notes, not a real order.\nHWANSEEK - English OCR practice - Page 1\n"
+      ],
+      "sameSourceContentAs": "clean-image-only.pdf page 1"
+    },
+    {
+      "file": "existing-text-control.pdf",
+      "pages": 2,
+      "expectedInitialExtractableText": "page 1 full source text; page 2 header only",
+      "expectedInitialTextByPage": [
+        "HWANSEEK\nMAPLE project notes\nSynthetic practice page 1 of 2\nProject ID: MAPLE-0427\nPurpose: prepare a small desk organizer.\nKeep the cobalt notebook beside the sample tray.\nInventory\nTray count: 18\nLabel set: BATCH-0018\nReference amount: 73.50\nReview note: The blue insert stays in Box 4.\nNext step\nCheck the printed list before filing the pages.\nThese are invented notes, not a real order.\nHWANSEEK - English OCR practice - Page 1\n",
+        "Mixed-page control: real header, image body\n"
+      ],
+      "expectedTranscriptionByPage": [
+        "HWANSEEK\nMAPLE project notes\nSynthetic practice page 1 of 2\nProject ID: MAPLE-0427\nPurpose: prepare a small desk organizer.\nKeep the cobalt notebook beside the sample tray.\nInventory\nTray count: 18\nLabel set: BATCH-0018\nReference amount: 73.50\nReview note: The blue insert stays in Box 4.\nNext step\nCheck the printed list before filing the pages.\nThese are invented notes, not a real order.\nHWANSEEK - English OCR practice - Page 1\n",
+        "Mixed-page control: real header, image body\nHWANSEEK\nMAPLE project notes\nSynthetic practice page 1 of 2\nProject ID: MAPLE-0427\nPurpose: prepare a small desk organizer.\nKeep the cobalt notebook beside the sample tray.\nInventory\nTray count: 18\nLabel set: BATCH-0018\nReference amount: 73.50\nReview note: The blue insert stays in Box 4.\nNext step\nCheck the printed list before filing the pages.\nThese are invented notes, not a real order.\nHWANSEEK - English OCR practice - Page 1\n"
+      ],
+      "sameSourceContentAs": "Page 1: clean-image-only.pdf page 1 as native text. Page 2: one native-text header above an image of clean page 1."
+    }
+  ],
+  "searchTerms": [
+    {
+      "text": "MAPLE-0427",
+      "cleanPages": [
+        1,
+        2
+      ],
+      "degradedPages": [
+        1
+      ],
+      "controlVisuallyPresentPages": [
+        1,
+        2
+      ],
+      "controlInitiallySearchablePages": [
+        1
+      ]
+    },
+    {
+      "text": "cobalt notebook",
+      "cleanPages": [
+        1
+      ],
+      "degradedPages": [
+        1
+      ],
+      "controlVisuallyPresentPages": [
+        1,
+        2
+      ],
+      "controlInitiallySearchablePages": [
+        1
+      ]
+    },
+    {
+      "text": "BATCH-0018",
+      "cleanPages": [
+        1
+      ],
+      "degradedPages": [
+        1
+      ],
+      "controlVisuallyPresentPages": [
+        1,
+        2
+      ],
+      "controlInitiallySearchablePages": [
+        1
+      ]
+    },
+    {
+      "text": "73.50",
+      "cleanPages": [
+        1
+      ],
+      "degradedPages": [
+        1
+      ],
+      "controlVisuallyPresentPages": [
+        1,
+        2
+      ],
+      "controlInitiallySearchablePages": [
+        1
+      ]
+    },
+    {
+      "text": "LAMP-6209",
+      "cleanPages": [
+        2
+      ],
+      "degradedPages": [],
+      "controlVisuallyPresentPages": [],
+      "controlInitiallySearchablePages": []
+    }
+  ],
+  "checkInstructions": [
+    "Check page count and page appearance after OCR, then search and copy text.",
+    "Compare exact letters, digits, hyphens, punctuation, and words against this source; line wrapping may differ.",
+    "Report clean and degraded outputs separately. A searchable text layer is not proof that every character is correct.",
+    "The control page 1 needs no OCR. Page 2 contains a real-text header but the image-body text is not initially searchable. Report each page separately: a hit on page 1 does not establish that page 2 was OCR-processed.",
+    "Search-term checks are selected spot checks, not a statistical accuracy measurement."
+  ]
+}
